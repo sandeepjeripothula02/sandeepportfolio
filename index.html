@@ -1,0 +1,738 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandeep — Senior Graphic Designer & Video Editor | Creative Studio Portfolio</title>
+  <meta name="description" content="Official portfolio of Sandeep — Senior Graphic Designer and Video Editor specializing in branding, high-CTR YouTube thumbnails, posters, digital creatives, short-form reels, and cinematic video editing." />
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%23a855f7%22/><text y=%2265%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%23ffffff%22>S</text></svg>" type="image/svg+xml">
+
+  <!-- Google Fonts & Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#a855f7',
+              cyan: '#06b6d4',
+              orange: '#f97316',
+              dark: '#09090b',
+              card: '#121216'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-[#09090b] text-zinc-100 antialiased selection:bg-purple-500/30 selection:text-white relative">
+
+  <!-- Ambient Studio Lighting Background Elements -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="glow-purple -top-40 -left-40"></div>
+    <div class="glow-cyan top-1/3 -right-40"></div>
+    <div class="glow-orange bottom-10 left-1/4"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-40 bg-radial-fade"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-transform">
+          S
+        </div>
+        <div class="flex flex-col">
+          <span class="font-black text-lg tracking-wider text-white font-heading group-hover:text-purple-300 transition-colors">SANDEEP</span>
+          <span class="text-[10px] uppercase font-mono-tag tracking-widest text-zinc-400">Design • Video</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-zinc-900/70 border border-white/10 backdrop-blur-xl px-4 py-1.5 rounded-full shadow-xl">
+        <a href="#work" class="px-3.5 py-1.5 text-xs font-semibold text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Work</a>
+        <a href="#services" class="px-3.5 py-1.5 text-xs font-semibold text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Services</a>
+        <a href="#skills" class="px-3.5 py-1.5 text-xs font-semibold text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Skills</a>
+        <a href="#about" class="px-3.5 py-1.5 text-xs font-semibold text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-all">About</a>
+        <a href="#process" class="px-3.5 py-1.5 text-xs font-semibold text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Process</a>
+        <a href="#contact" class="px-3.5 py-1.5 text-xs font-semibold text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Contact</a>
+      </nav>
+
+      <!-- Action & Availability -->
+      <div class="flex items-center gap-3">
+        <div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-medium text-emerald-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 studio-pulse"></span>
+          <span>Available for Projects</span>
+        </div>
+
+        <button onclick="openInquiryModal()" class="px-5 py-2 rounded-xl bg-white text-zinc-950 hover:bg-purple-100 font-bold text-xs shadow-lg shadow-white/10 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </button>
+
+        <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden max-w-7xl mx-auto mt-3 p-4 rounded-2xl glass-panel border border-white/15 space-y-2">
+      <a href="#work" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-200 hover:bg-white/10">Portfolio Work</a>
+      <a href="#services" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-200 hover:bg-white/10">Services</a>
+      <a href="#skills" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-200 hover:bg-white/10">Skills & Software</a>
+      <a href="#about" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-200 hover:bg-white/10">About Sandeep</a>
+      <a href="#process" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-200 hover:bg-white/10">Creative Process</a>
+      <a href="#contact" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-200 hover:bg-white/10">Contact & Inquiry</a>
+      <div class="pt-2 border-t border-white/10 flex justify-center">
+        <span class="text-xs text-emerald-400 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 studio-pulse"></span>
+          Available for Freelance & Full-time Projects
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen pt-32 pb-20 px-4 sm:px-8 max-w-7xl mx-auto flex flex-col justify-center relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-md shadow-inner">
+            <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 studio-pulse"></span>
+            <span class="text-xs font-mono-tag tracking-wider font-semibold text-zinc-200 uppercase">Senior Graphic Designer & Video Editor</span>
+          </div>
+
+          <div class="space-y-2">
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white font-heading tracking-tight leading-none">
+              <span class="profile-name block">SANDEEP</span>
+            </h1>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-400 font-heading">
+              <span class="profile-title">Graphic Designer & Video Editor</span>
+            </h2>
+          </div>
+
+          <p class="text-lg sm:text-xl font-medium text-zinc-200 italic border-l-2 border-purple-500 pl-4 py-1 profile-tagline">
+            “I turn ideas into powerful visuals, brands into experiences, and videos into stories.”
+          </p>
+
+          <p class="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl profile-intro">
+            Creative Graphic Designer and Video Editor specializing in branding, social media creatives, thumbnails, posters, digital designs, short-form videos, and full-length video editing.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+            <a href="#work" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-zinc-200 text-zinc-950 font-bold text-sm shadow-xl shadow-white/10 hover:shadow-purple-500/20 transition-all flex items-center justify-center gap-3 group">
+              <span>View My Work</span>
+              <i class="fa-solid fa-arrow-down text-xs group-hover:translate-y-1 transition-transform"></i>
+            </a>
+
+            <button onclick="openInquiryModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-white/10 border border-white/20 text-white font-bold text-sm shadow-xl transition-all flex items-center justify-center gap-3 group">
+              <span>Let’s Work Together</span>
+              <i class="fa-solid fa-paper-plane text-xs text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <!-- Statistics Grid -->
+          <div id="hero-stats-container" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 w-full"></div>
+
+          <!-- Trust Badges -->
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs text-zinc-400">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> 30+ Clients</span>
+            <span class="text-zinc-600">•</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> 500+ Projects Completed</span>
+            <span class="text-zinc-600">•</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Graphic Design + Video Editing</span>
+            <span class="text-zinc-600">•</span>
+            <span class="flex items-center gap-1.5 text-purple-300 font-semibold"><i class="fa-solid fa-gem text-purple-400 text-[10px]"></i> Creative • Professional • Reliable</span>
+          </div>
+        </div>
+
+        <!-- Hero Right Column (Workstation Cinematic Showcase) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
+            <img src="assets/images/hero_workspace.jpg" alt="Sandeep working at modern creative studio workstation" class="w-full h-[450px] sm:h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"></div>
+
+            <div class="absolute top-4 left-4 glass-panel px-3.5 py-2 rounded-xl flex items-center gap-2.5 border border-white/20 shadow-xl floating-elem">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500 studio-pulse"></span>
+              <span class="font-mono-tag text-xs font-bold text-white">4K EDITING & COLOR SUITE</span>
+            </div>
+
+            <div class="absolute top-4 right-4 glass-panel px-3 py-1.5 rounded-xl border border-white/20 shadow-xl font-mono-tag text-xs font-bold text-purple-300">
+              ADOBE CC PRO
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-xl">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-xs uppercase tracking-wider text-purple-400 font-mono-tag font-semibold">Active Production Studio</div>
+                  <div class="text-sm font-bold text-white font-heading">Photoshop • Premiere Pro • After Effects</div>
+                </div>
+                <div class="flex -space-x-2">
+                  <div class="w-8 h-8 rounded-lg bg-[#31A8FF] flex items-center justify-center text-white text-[11px] font-bold shadow-md">Ps</div>
+                  <div class="w-8 h-8 rounded-lg bg-[#FF9A00] flex items-center justify-center text-white text-[11px] font-bold shadow-md">Ai</div>
+                  <div class="w-8 h-8 rounded-lg bg-[#EA77FF] flex items-center justify-center text-white text-[11px] font-bold shadow-md">Pr</div>
+                  <div class="w-8 h-8 rounded-lg bg-[#9999FF] flex items-center justify-center text-white text-[11px] font-bold shadow-md">Ae</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -inset-2 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl blur-2xl opacity-20 -z-10"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 relative space-y-4">
+          <div class="glass-panel p-2 rounded-3xl border border-white/15 overflow-hidden shadow-2xl">
+            <img src="assets/images/branding_mockup.jpg" alt="Sandeep Creative Brand Work" class="w-full h-80 sm:h-96 object-cover rounded-2xl" />
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10 relative overflow-hidden">
+            <div class="text-xs uppercase tracking-wider text-cyan-400 font-mono-tag font-bold mb-1">Design Philosophy</div>
+            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed italic">
+              "Great design isn't just decoration — it commands attention, shapes perception, and compels action."
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono-tag text-purple-300 uppercase">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <span>About Sandeep</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-heading">
+            Hi, I’m <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Sandeep</span> — Graphic Designer & Video Editor
+          </h2>
+
+          <div class="space-y-4 text-zinc-300 text-sm sm:text-base leading-relaxed">
+            <p>
+              Hi, I’m Sandeep — a Graphic Designer & Video Editor passionate about creating visually powerful and engaging content.
+            </p>
+            <p>
+              I work across multiple creative disciplines, from branding and social media designs to thumbnails, posters, advertisements, short-form videos and full-length video editing.
+            </p>
+            <p>
+              I focus on combining creativity, visual storytelling, modern design principles and professional editing to create content that looks impressive and communicates clearly.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div class="glass-panel p-4 rounded-xl border border-white/10">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm mb-2">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h4 class="text-sm font-bold text-white font-heading">Visual Impact</h4>
+              <p class="text-xs text-zinc-400 mt-1">High-CTR thumbnails & bold brand identities.</p>
+            </div>
+
+            <div class="glass-panel p-4 rounded-xl border border-white/10">
+              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm mb-2">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <h4 class="text-sm font-bold text-white font-heading">Storytelling</h4>
+              <p class="text-xs text-zinc-400 mt-1">Pacing, retention & cinematic color grading.</p>
+            </div>
+
+            <div class="glass-panel p-4 rounded-xl border border-white/10">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm mb-2">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h4 class="text-sm font-bold text-white font-heading">Fast Delivery</h4>
+              <p class="text-xs text-zinc-400 mt-1">Dependable turnaround with pixel perfection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLS & SOFTWARE ECOSYSTEM -->
+    <section id="skills" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono-tag text-purple-300 uppercase">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Skills & Software</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
+          Mastered Creative <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-400">Toolkit & Disciplines</span>
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400">
+          Clean professional software mastery and specialized creative disciplines across high-end graphic design and full-spectrum video editing.
+        </p>
+      </div>
+
+      <div id="software-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 relative overflow-hidden">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-500/20">
+              <i class="fa-solid fa-paintbrush"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white font-heading">Graphic Design</h3>
+              <p class="text-xs text-zinc-400">Adobe Photoshop • Adobe Illustrator • Canva</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-6">
+            Creating memorable brand visual identities, high-converting digital advertising assets, scroll-stopping social media graphics, posters, and YouTube thumbnails engineered for maximum click-through rates.
+          </p>
+          <div class="text-xs font-mono-tag uppercase tracking-wider text-zinc-400 mb-3 font-semibold">Specialized Capabilities</div>
+          <div id="gd-skills-list" class="flex flex-wrap gap-2.5"></div>
+        </div>
+
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 relative overflow-hidden">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center text-white text-xl shadow-lg shadow-purple-600/20">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white font-heading">Video Editing</h3>
+              <p class="text-xs text-zinc-400">Adobe Premiere Pro • Adobe After Effects</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-6">
+            From viral vertical reels and shorts to full-length documentary edits, commercial advertisements, and complex 2D/3D motion graphics animations with cinematic color grading and spatial sound design.
+          </p>
+          <div class="text-xs font-mono-tag uppercase tracking-wider text-zinc-400 mb-3 font-semibold">Specialized Capabilities</div>
+          <div id="ve-skills-list" class="flex flex-wrap gap-2.5"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY SERVICES (8 CORE OFFERINGS) -->
+    <section id="services" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono-tag text-cyan-300 uppercase">
+          <i class="fa-solid fa-shapes"></i>
+          <span>What I Offer</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
+          My <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Creative Services</span>
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400">
+          Tailored design and video production solutions designed to help creators, brands, and businesses dominate their visual presence.
+        </p>
+      </div>
+
+      <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </section>
+
+    <!-- MASONRY PORTFOLIO GALLERY -->
+    <section id="work" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono-tag text-purple-300 uppercase">
+            <i class="fa-solid fa-crown"></i>
+            <span>Featured Portfolio</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
+            Selected <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Creative Works</span>
+          </h2>
+          <p class="text-sm text-zinc-400 max-w-xl">
+            Explore recent graphic designs, viral YouTube thumbnails, commercial posters, luxury branding identities, and cinematic video edits.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">All</button>
+          <button data-filter="graphic-design" class="filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">Graphic Design</button>
+          <button data-filter="thumbnails" class="filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">Thumbnails</button>
+          <button data-filter="posters" class="filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">Posters</button>
+          <button data-filter="social-media" class="filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">Social Media</button>
+          <button data-filter="branding" class="filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">Branding</button>
+          <button data-filter="video-editing" class="filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">Video Editing</button>
+          <button data-filter="motion-graphics" class="filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 hover:border-white/30 transition-all">Motion Graphics</button>
+        </div>
+      </div>
+
+      <div id="portfolio-masonry-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[minmax(180px,auto)]"></div>
+    </section>
+    <!-- INTERACTIVE BEFORE / AFTER SHOWCASE -->
+    <section class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono-tag text-purple-300 uppercase">
+          <i class="fa-solid fa-code-compare"></i>
+          <span>Transformation Showcase</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
+          Before & After <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Creative Mastery</span>
+        </h2>
+        <p class="text-sm text-zinc-400">
+          Drag the interactive slider below to see how raw footage and flat concepts are transformed into cinematic, color-graded masterpieces.
+        </p>
+      </div>
+
+      <div class="glass-panel p-4 rounded-3xl border border-white/15 max-w-5xl mx-auto shadow-2xl">
+        <div id="before-after-slider" class="comparison-container w-full h-[360px] sm:h-[480px] rounded-2xl relative overflow-hidden cursor-ew-resize">
+          <img src="assets/images/video_editing_mockup.jpg" alt="After Color Grading & Editing" class="w-full h-full object-cover select-none pointer-events-none" />
+          
+          <div class="absolute bottom-4 right-4 z-10 glass-panel px-3.5 py-1.5 rounded-lg border border-white/20 text-xs font-mono-tag font-bold text-white shadow-xl">
+            AFTER: 4K COLOR GRADED & EDITED
+          </div>
+
+          <div class="comparison-before absolute inset-0 w-1/2 overflow-hidden select-none pointer-events-none">
+            <img src="assets/images/video_editing_mockup.jpg" alt="Before Flat Footage" class="w-full h-full object-cover filter grayscale contrast-75 brightness-90 max-w-none" style="width: 100%; height: 100%;" />
+            
+            <div class="absolute bottom-4 left-4 z-10 glass-panel px-3.5 py-1.5 rounded-lg border border-white/20 text-xs font-mono-tag font-bold text-zinc-300 shadow-xl">
+              BEFORE: RAW FLAT FOOTAGE / DRAFT
+            </div>
+          </div>
+
+          <div class="comparison-handle" style="left: 50%;">
+            <div class="handle-circle">
+              <i class="fa-solid fa-arrows-left-right text-xs text-white"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-zinc-400 mt-3 px-2">
+          <span><i class="fa-solid fa-hand-pointer text-purple-400 mr-1.5"></i> Click & drag horizontally</span>
+          <span class="font-mono-tag text-purple-400">Tokyo Supercar Color Grading Case Study</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & ACHIEVEMENTS SECTION -->
+    <section id="experience-stats" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-white/15 relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div class="space-y-2 border-b lg:border-b-0 lg:border-r border-white/10 pb-6 lg:pb-0 lg:pr-6">
+            <div class="text-4xl sm:text-5xl font-black text-white font-heading counter-val" data-target="30+">30+</div>
+            <div class="text-sm font-bold text-purple-300 font-heading">Clients Served</div>
+            <p class="text-xs text-zinc-400 leading-relaxed">Trusted by YouTubers, brands, digital agencies, and startup founders worldwide.</p>
+          </div>
+
+          <div class="space-y-2 border-b lg:border-b-0 lg:border-r border-white/10 pb-6 lg:pb-0 lg:pr-6">
+            <div class="text-4xl sm:text-5xl font-black text-white font-heading counter-val" data-target="500+">500+</div>
+            <div class="text-sm font-bold text-cyan-300 font-heading">Creative Projects</div>
+            <p class="text-xs text-zinc-400 leading-relaxed">High-CTR thumbnails, posters, brand identity packages, and video edits delivered.</p>
+          </div>
+
+          <div class="space-y-2 border-b lg:border-b-0 lg:border-r border-white/10 pb-6 lg:pb-0 lg:pr-6">
+            <div class="text-4xl sm:text-5xl font-black text-white font-heading">2-in-1</div>
+            <div class="text-sm font-bold text-pink-300 font-heading">Design + Video Synergy</div>
+            <p class="text-xs text-zinc-400 leading-relaxed">Full creative stack from static visual design to cinematic video editing.</p>
+          </div>
+
+          <div class="space-y-2">
+            <div class="text-4xl sm:text-5xl font-black text-white font-heading">99.4%</div>
+            <div class="text-sm font-bold text-emerald-300 font-heading">On-Time Reliability</div>
+            <p class="text-xs text-zinc-400 leading-relaxed">Reliable communication, clear milestones, and strict deadline adherence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE PROCESS (4-STEP WORKFLOW) -->
+    <section id="process" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono-tag text-purple-300 uppercase">
+          <i class="fa-solid fa-arrow-progress"></i>
+          <span>Workflow Methodology</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
+          The 4-Step <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Creative Process</span>
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400">
+          A seamless, structured creative pipeline ensuring every design and video edit hits the mark on time, every time.
+        </p>
+      </div>
+
+      <div id="process-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </section>
+
+    <!-- WHY WORK WITH ME -->
+    <section class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono-tag text-cyan-300 uppercase">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>The Sandeep Advantage</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
+          Why Work <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">With Me?</span>
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400">
+          Professional standards, obsessive attention to detail, and a collaborative mindset tailored to your brand goals.
+        </p>
+      </div>
+
+      <div id="why-choose-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+    <!-- CONTACT & CTA SECTION -->
+    <section id="contact" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono-tag text-purple-300 uppercase">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Get in Touch</span>
+          </div>
+
+          <div class="space-y-3">
+            <h2 class="text-4xl sm:text-5xl font-black text-white font-heading leading-tight">
+              Have a project in mind? <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-400">Let’s create something amazing together.</span>
+            </h2>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Whether you need high-CTR YouTube thumbnails, complete brand visual identity, cinematic video editing, or engaging motion graphics, I'm ready to bring your vision to life.
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-white/15 space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-xs uppercase font-mono-tag text-zinc-400 font-semibold">Direct Email</div>
+                <a href="mailto:sandeepjeripothula8@gmail.com" class="text-sm sm:text-base font-bold text-white hover:text-purple-300 transition-colors font-mono-tag">
+                  sandeepjeripothula8@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <button onclick="copyEmailToClipboard()" class="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-zinc-200 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-copy text-purple-400"></i>
+              <span>Copy Email Address</span>
+            </button>
+          </div>
+
+          <div class="space-y-3">
+            <div class="text-xs uppercase tracking-wider text-zinc-400 font-mono-tag font-semibold">Connect on Creative Platforms</div>
+            <div class="flex items-center gap-3">
+              <a href="#" class="w-11 h-11 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white hover:border-purple-500/50 transition-all hover:scale-105" title="Behance">
+                <i class="fa-brands fa-behance text-lg"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white hover:border-purple-500/50 transition-all hover:scale-105" title="Dribbble">
+                <i class="fa-brands fa-dribbble text-lg"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white hover:border-purple-500/50 transition-all hover:scale-105" title="YouTube">
+                <i class="fa-brands fa-youtube text-lg"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white hover:border-purple-500/50 transition-all hover:scale-105" title="Instagram">
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white hover:border-purple-500/50 transition-all hover:scale-105" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in text-lg"></i>
+              </a>
+              <a href="#" class="w-11 h-11 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white hover:border-purple-500/50 transition-all hover:scale-105" title="Discord">
+                <i class="fa-brands fa-discord text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-white/15 relative overflow-hidden shadow-2xl">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-white font-heading">Start a Project</h3>
+              <p class="text-xs text-zinc-400 mt-1">Fill out the brief below to send your project details directly to Sandeep.</p>
+            </div>
+
+            <form id="contact-project-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="space-y-1.5">
+                  <label for="form-name" class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Your Name *</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Marcus Vance" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-purple-500 transition-colors" />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-email" class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Your Email *</label>
+                  <input type="email" id="form-email" required placeholder="e.g. marcus@brand.com" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-purple-500 transition-colors" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="space-y-1.5">
+                  <label for="form-service" class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Service Needed</label>
+                  <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-purple-500 transition-colors">
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="YouTube Thumbnails">YouTube Thumbnails</option>
+                    <option value="Poster Design">Poster Design</option>
+                    <option value="Social Media Design">Social Media Design</option>
+                    <option value="Branding & Identity">Branding & Identity</option>
+                    <option value="Video Editing">Video Editing</option>
+                    <option value="Motion Graphics">Motion Graphics</option>
+                    <option value="Advertisement Videos">Advertisement Videos</option>
+                    <option value="Full Package (Design + Video)">Full Package (Design + Video)</option>
+                  </select>
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-timeline" class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Timeline</label>
+                  <select id="form-timeline" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-purple-500 transition-colors">
+                    <option value="Urgent (1-3 Days)">Urgent (1-3 Days)</option>
+                    <option value="Standard (1-2 Weeks)" selected>Standard (1-2 Weeks)</option>
+                    <option value="Flexible (1 Month+)">Flexible (1 Month+)</option>
+                  </select>
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-budget" class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Budget Range</label>
+                  <select id="form-budget" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-purple-500 transition-colors">
+                    <option value="$250 - $500">$250 – $500</option>
+                    <option value="$500 - $1,500" selected>$500 – $1,500</option>
+                    <option value="$1,500 - $3,000">$1,500 – $3,000</option>
+                    <option value="$3,000+">$3,000+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="form-message" class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Project Details & Requirements *</label>
+                <textarea id="form-message" rows="4" required placeholder="Tell me about your project, target audience, style preferences, or reference links..." class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-purple-500 transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm shadow-xl shadow-purple-600/30 transition-all flex items-center justify-center gap-3">
+                <span>Send Project Brief to Sandeep</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-12 px-4 sm:px-8 bg-zinc-950 relative z-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center text-white font-extrabold text-base">
+          S
+        </div>
+        <div>
+          <div class="font-bold text-white font-heading text-sm">SANDEEP</div>
+          <div class="text-[11px] text-zinc-400 font-mono-tag">Senior Graphic Designer & Video Editor</div>
+        </div>
+      </div>
+
+      <div class="text-xs text-zinc-500 text-center">
+        © 2024-2026 Sandeep. All rights reserved. • Designed with pixel precision.
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="#hero" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-zinc-300 hover:text-white transition-all" title="Back to Top">
+          <i class="fa-solid fa-arrow-up text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CASE STUDY LIGHTBOX MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 modal-backdrop">
+    <div class="glass-panel w-full max-w-4xl max-h-[90vh] rounded-3xl border border-white/20 overflow-y-auto shadow-2xl relative p-6 sm:p-8" onclick="event.stopPropagation()">
+      <button onclick="closeProjectModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center text-white text-base transition-colors z-20">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center gap-3 text-xs text-zinc-400 mb-2">
+        <span id="modal-project-category" class="font-mono-tag font-semibold text-purple-400 uppercase">Category</span>
+        <span>•</span>
+        <span id="modal-project-client">Client</span>
+        <span>•</span>
+        <span id="modal-project-year">2024</span>
+      </div>
+
+      <h2 id="modal-project-title" class="text-2xl sm:text-3xl font-black text-white font-heading mb-6">Project Title</h2>
+
+      <div id="modal-media-container" class="mb-6"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-white/10">
+        <div class="md:col-span-2 space-y-4">
+          <div class="text-xs uppercase font-mono-tag text-zinc-400 font-semibold">Project Overview & Story</div>
+          <p id="modal-project-desc" class="text-sm text-zinc-300 leading-relaxed"></p>
+          
+          <div class="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20 text-xs text-purple-200">
+            <span class="font-bold">Key Achievement: </span>
+            <span id="modal-project-metrics"></span>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <div class="text-xs uppercase font-mono-tag text-zinc-400 font-semibold mb-2">Tags</div>
+            <div id="modal-project-tags" class="flex flex-wrap gap-1.5"></div>
+          </div>
+
+          <div>
+            <div class="text-xs uppercase font-mono-tag text-zinc-400 font-semibold mb-2">Tools Used</div>
+            <div id="modal-project-tools" class="flex flex-wrap gap-1.5"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-white/10 flex justify-end gap-3">
+        <button onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-semibold text-zinc-300">Close</button>
+        <button onclick="closeProjectModal(); openInquiryModal()" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-semibold text-white">Inquire Similar Project</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK INQUIRY MODAL -->
+  <div id="inquiry-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 modal-backdrop">
+    <div class="glass-panel w-full max-w-xl rounded-3xl border border-white/20 p-6 sm:p-8 shadow-2xl relative" onclick="event.stopPropagation()">
+      <button onclick="closeInquiryModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center text-white text-sm transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-xs font-mono-tag text-purple-400 uppercase font-semibold">Direct Collaboration</span>
+        <h3 class="text-2xl font-bold text-white font-heading mt-1">Let’s Work Together</h3>
+        <p class="text-xs text-zinc-400 mt-1">Send a direct project inquiry to Sandeep (sandeepjeripothula8@gmail.com)</p>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Service Type</label>
+          <input type="text" id="inquiry-service-type" value="Graphic Design & Video Editing" class="w-full mt-1 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm" />
+        </div>
+
+        <div>
+          <label class="text-xs font-mono-tag uppercase text-zinc-300 font-semibold">Your Contact Email</label>
+          <input type="email" id="inquiry-client-email" placeholder="you@company.com" class="w-full mt-1 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm" />
+        </div>
+
+        <button onclick="triggerDirectEmailLaunch()" class="w-full py-3 rounded-xl bg-white hover:bg-zinc-200 text-zinc-950 font-bold text-sm shadow-xl transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-envelope text-purple-600"></i>
+          <span>Open Email with Sandeep</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function triggerDirectEmailLaunch() {
+      const service = document.getElementById("inquiry-service-type").value;
+      const clientEmail = document.getElementById("inquiry-client-email").value;
+      const subject = encodeURIComponent("Project Inquiry: " + service);
+      const body = encodeURIComponent("Hi Sandeep,\n\nI would like to discuss a project with you regarding " + service + ".\n\nMy email: " + clientEmail);
+      window.location.href = "mailto:sandeepjeripothula8@gmail.com?subject=" + subject + "&body=" + body;
+      closeInquiryModal();
+    }
+  </script>
+
+  <!-- Load Portfolio Data & Application Scripts -->
+  <script src="assets/js/portfolio-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

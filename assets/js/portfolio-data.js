@@ -7,10 +7,13 @@ const PORTFOLIO_DATA = {
     tagline: "I turn ideas into powerful visuals, brands into experiences, and videos into stories.",
     intro: "Creative Graphic Designer and Video Editor specializing in branding, social media creatives, thumbnails, posters, digital designs, short-form videos, and full-length video editing.",
     email: "sandeepjeripothula8@gmail.com",
+    phone: "+91 9545382894",
+    phoneRaw: "9545382894",
+    whatsappUrl: "https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!",
     location: "India • Available Worldwide",
     experienceYears: "5+ Years",
     stats: [
-      { label: "Clients", value: "30+", subtext: "Served across diverse industries" },
+      { label: "Clients Served", value: "30+", subtext: "Across diverse industries" },
       { label: "Projects Completed", value: "500+", subtext: "Creative designs & video edits" },
       { label: "Disciplines", value: "Design + Video", subtext: "Complete visual storytelling" },
       { label: "Pillars", value: "Creative • Pro", subtext: "Reliable & client-focused" }
@@ -24,7 +27,7 @@ const PORTFOLIO_DATA = {
         name: "Adobe Photoshop",
         short: "Ps",
         color: "#31A8FF",
-        glow: "rgba(49, 168, 255, 0.4)",
+        glow: "rgba(49, 168, 255, 0.35)",
         category: "Graphic Design",
         level: "Master / 98%",
         icon: "fa-solid fa-image",
@@ -34,7 +37,7 @@ const PORTFOLIO_DATA = {
         name: "Adobe Illustrator",
         short: "Ai",
         color: "#FF9A00",
-        glow: "rgba(255, 154, 0, 0.4)",
+        glow: "rgba(255, 154, 0, 0.35)",
         category: "Graphic Design",
         level: "Advanced / 95%",
         icon: "fa-solid fa-bezier-curve",
@@ -44,7 +47,7 @@ const PORTFOLIO_DATA = {
         name: "Adobe Premiere Pro",
         short: "Pr",
         color: "#EA77FF",
-        glow: "rgba(234, 119, 255, 0.4)",
+        glow: "rgba(234, 119, 255, 0.35)",
         category: "Video Editing",
         level: "Master / 96%",
         icon: "fa-solid fa-video",
@@ -54,17 +57,17 @@ const PORTFOLIO_DATA = {
         name: "Adobe After Effects",
         short: "Ae",
         color: "#9999FF",
-        glow: "rgba(153, 153, 255, 0.4)",
+        glow: "rgba(153, 153, 255, 0.35)",
         category: "Video Editing",
         level: "Advanced / 92%",
         icon: "fa-solid fa-wand-magic-sparkles",
         desc: "Kinetic typography, 2D/3D motion graphics, visual effects, logo animations, and smooth transitions."
       },
       {
-        name: "Canva",
+        name: "Canva Pro",
         short: "Cv",
         color: "#00C4CC",
-        glow: "rgba(0, 196, 204, 0.4)",
+        glow: "rgba(0, 196, 204, 0.35)",
         category: "Graphic Design",
         level: "Expert / 95%",
         icon: "fa-solid fa-cubes",
@@ -74,7 +77,7 @@ const PORTFOLIO_DATA = {
         name: "DaVinci Resolve",
         short: "Dv",
         color: "#FF5E62",
-        glow: "rgba(255, 94, 98, 0.4)",
+        glow: "rgba(255, 94, 98, 0.35)",
         category: "Video Editing",
         level: "Proficient / 88%",
         icon: "fa-solid fa-sliders",
@@ -95,8 +98,8 @@ const PORTFOLIO_DATA = {
     videoEditingList: [
       { name: "Adobe Premiere Pro", highlight: true },
       { name: "Adobe After Effects", highlight: true },
-      { name: "Short Videos", highlight: false },
-      { name: "Reels", highlight: false },
+      { name: "Short Videos & Shorts", highlight: false },
+      { name: "Instagram Reels", highlight: false },
       { name: "YouTube Videos", highlight: false },
       { name: "Promotional Videos", highlight: false },
       { name: "Full-Length Videos", highlight: false },
@@ -464,30 +467,6 @@ const PORTFOLIO_DATA = {
       desc: "Designs created according to the client's goals and brand identity. Focused on viewer retention, click-through rates, and long-term brand equity.",
       icon: "fa-solid fa-crosshairs",
       tag: "Goal Oriented"
-    }
-  ],
-
-  testimonials: [
-    {
-      name: "Marcus Vance",
-      role: "Founder, Apex Velocity Automotive",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-      content: "Sandeep's video editing and color grading transformed our car commercials into Hollywood-grade films. Our engagement spiked by over 300% on YouTube and Instagram!",
-      rating: 5
-    },
-    {
-      name: "Elena Rostova",
-      role: "Creative Director, Aurélia Luxe Paris",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
-      content: "Working with Sandeep on our brand identity was an absolute dream. He delivered packaging and stationery designs that look genuinely luxurious and sophisticated.",
-      rating: 5
-    },
-    {
-      name: "Aman Sharma",
-      role: "Lead Creator, TechVision (1.8M Subscribers)",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
-      content: "Finding someone who excels at BOTH high-CTR YouTube thumbnails and fast-paced video editing is rare. Sandeep is now our go-to creative partner for all channel uploads.",
-      rating: 5
     }
   ]
 };

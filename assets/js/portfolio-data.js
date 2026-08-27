@@ -81,8 +81,8 @@ const PORTFOLIO_DATA = {
     { id: "p2", title: "Himalaya Face Wash", category: "Posters", image: "assets/images/portfolio/facewash.jpg", searchTerms: "poster product social media face wash skincare" },
     { id: "p3", title: "Vitamin C Serum Promo", category: "Social Media", image: "assets/images/portfolio/serum1.jpg", searchTerms: "social media advertisement product serum orange" },
     { id: "p4", title: "Glowora Skin Care", category: "Branding", image: "assets/images/portfolio/serum2.jpg", searchTerms: "branding visual identity skincare product" },
-    { id: "p5", title: "Audio Gear Campaign", category: "Social Media", image: "assets/images/portfolio/earbuds.png", searchTerms: "advertisement promo marketing graphic design earbuds" },
-    { id: "p6", title: "Herbal Care Poster", category: "Posters", image: "assets/images/portfolio/facewash.jpg", searchTerms: "poster flyer graphic design event skincare" },
+    { id: "p5", title: "Porsche 911 GT3 RS", category: "Posters", image: "assets/images/portfolio/porsche.jpg", searchTerms: "poster automotive car porsche sports" },
+    { id: "p6", title: "Fresh Sprite Ad", category: "Advertisements", image: "assets/images/portfolio/sprite.jpg", searchTerms: "advertisement drink beverage sprite social media" },
     { id: "p7", title: "Cosmetics Promotion", category: "Advertisements", image: "assets/images/portfolio/serum1.jpg", searchTerms: "motion graphics animation after effects cosmetics" },
     { id: "p8", title: "Radiant Brand Identity", category: "Branding", image: "assets/images/portfolio/serum2.jpg", searchTerms: "branding logo cosmetics design" }
   ]

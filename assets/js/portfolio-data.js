@@ -77,13 +77,13 @@ const PORTFOLIO_DATA = {
     { title: "Reliable", desc: "Professional communication and organized creative workflow.", icon: "fa-handshake" }
   ],
   portfolio: [
-    { id: "p1", title: "Cyberpunk Poster Art", category: "Posters", image: "assets/images/poster_mockup.jpg", searchTerms: "poster photoshop graphic design" },
-    { id: "p2", title: "Tech Review Thumbnail", category: "Thumbnails", image: "assets/images/thumbnail_mockup.jpg", searchTerms: "thumbnail youtube video editing" },
-    { id: "p3", title: "Streetwear Campaign", category: "Social Media", image: "assets/images/social_mockup.jpg", searchTerms: "social media advertisement post" },
-    { id: "p4", title: "Luxury Brand Identity", category: "Branding", image: "assets/images/branding_mockup.jpg", searchTerms: "branding visual identity logo illustrator" },
-    { id: "p5", title: "Sneaker Ad Creative", category: "Advertisements", image: "assets/images/social_mockup.jpg", searchTerms: "advertisement promo marketing graphic design" },
-    { id: "p6", title: "Cinematic Vlog Edit", category: "Video Editing", image: "assets/images/video_editing_mockup.jpg", searchTerms: "video editing full video premiere pro" },
-    { id: "p7", title: "3D Logo Animation", category: "Motion Graphics", image: "assets/images/motion_mockup.jpg", searchTerms: "motion graphics animation after effects" },
-    { id: "p8", title: "Event Promo Flyer", category: "Posters", image: "assets/images/poster_mockup.jpg", searchTerms: "poster flyer graphic design event" }
+    { id: "p1", title: "Monster Audio Ad", category: "Advertisements", image: "assets/images/portfolio/earbuds.png", searchTerms: "poster photoshop graphic design earphone earbuds audio" },
+    { id: "p2", title: "Himalaya Face Wash", category: "Posters", image: "assets/images/portfolio/facewash.jpg", searchTerms: "poster product social media face wash skincare" },
+    { id: "p3", title: "Vitamin C Serum Promo", category: "Social Media", image: "assets/images/portfolio/serum1.jpg", searchTerms: "social media advertisement product serum orange" },
+    { id: "p4", title: "Glowora Skin Care", category: "Branding", image: "assets/images/portfolio/serum2.jpg", searchTerms: "branding visual identity skincare product" },
+    { id: "p5", title: "Audio Gear Campaign", category: "Social Media", image: "assets/images/portfolio/earbuds.png", searchTerms: "advertisement promo marketing graphic design earbuds" },
+    { id: "p6", title: "Herbal Care Poster", category: "Posters", image: "assets/images/portfolio/facewash.jpg", searchTerms: "poster flyer graphic design event skincare" },
+    { id: "p7", title: "Cosmetics Promotion", category: "Advertisements", image: "assets/images/portfolio/serum1.jpg", searchTerms: "motion graphics animation after effects cosmetics" },
+    { id: "p8", title: "Radiant Brand Identity", category: "Branding", image: "assets/images/portfolio/serum2.jpg", searchTerms: "branding logo cosmetics design" }
   ]
 };

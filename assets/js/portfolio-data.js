@@ -37,11 +37,11 @@ const PORTFOLIO_DATA = {
     { name: "Creative Visual Design", desc: "Unique visual concepts combining creativity and communication.", icon: "fa-palette" }
   ],
   software: [
-    { name: "Adobe Photoshop", desc: "Professional graphic design, image editing and photo manipulation.", icon: "assets/images/ps-icon.svg", faClass: "fa-camera" },
-    { name: "Adobe Illustrator", desc: "Branding, logos, vector graphics and professional illustrations.", icon: "assets/images/ai-icon.svg", faClass: "fa-bezier-curve" },
-    { name: "Canva", desc: "Social media designs, marketing creatives and fast digital content creation.", icon: "assets/images/canva-icon.svg", faClass: "fa-object-group" },
-    { name: "Adobe Premiere Pro", desc: "Professional video editing, storytelling, transitions and video production.", icon: "assets/images/pr-icon.svg", faClass: "fa-video" },
-    { name: "Adobe After Effects", desc: "Motion graphics, animation, visual effects and advanced video compositions.", icon: "assets/images/ae-icon.svg", faClass: "fa-layer-group" }
+    { name: "Adobe Photoshop", desc: "Professional graphic design, image editing and photo manipulation.", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" },
+    { name: "Adobe Illustrator", desc: "Branding, logos, vector graphics and professional illustrations.", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" },
+    { name: "Canva", desc: "Social media designs, marketing creatives and fast digital content creation.", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" },
+    { name: "Adobe Premiere Pro", desc: "Professional video editing, storytelling, transitions and video production.", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" },
+    { name: "Adobe After Effects", desc: "Motion graphics, animation, visual effects and advanced video compositions.", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-original.svg" }
   ],
   services: [
     { title: "Graphic Design", desc: "Professional digital designs, advertisements and creative visuals.", icon: "fa-pen-nib" },

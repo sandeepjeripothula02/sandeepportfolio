@@ -71,8 +71,8 @@ function renderSoftware() {
   c.innerHTML = PORTFOLIO_DATA.software.map(s => `
     <div class="glass-card p-6 flex flex-col group cursor-default reveal">
       <div class="flex items-center gap-5 mb-4">
-        <div class="w-14 h-14 shrink-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-500 shadow-lg">
-          <i class="fa-solid ${s.faClass}"></i>
+        <div class="w-14 h-14 shrink-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-500 shadow-lg p-2.5">
+          <img src="${s.icon}" alt="${s.name}" class="w-full h-full object-contain filter drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]" />
         </div>
         <h3 class="font-bold text-white text-lg">${s.name}</h3>
       </div>
@@ -199,19 +199,44 @@ function initNav() {
 function initSearch() {
   const searchInputs = document.querySelectorAll(".search-input");
   searchInputs.forEach(input => {
+    
+    // Listen for ENTER to scroll to relevant sections
+    input.addEventListener("keydown", (e) => {
+      if(e.key === "Enter") {
+        e.preventDefault();
+        const term = e.target.value.toLowerCase().trim();
+        
+        const sections = {
+          "skill": "#skills", "software": "#software", "photoshop": "#software", "illustrator": "#software", 
+          "canva": "#software", "premiere": "#software", "after effects": "#software",
+          "about": "#about", "experience": "#about", "service": "#services", "contact": "#contact", 
+          "project": "#projects", "portfolio": "#projects", "process": "#process", "why": "#why-me"
+        };
+        
+        let found = "#projects"; // fallback
+        for(let key in sections) {
+           if(term.includes(key)) { found = sections[key]; break; }
+        }
+        
+        const targetEl = document.querySelector(found);
+        if(targetEl) {
+           window.scrollTo({ top: targetEl.offsetTop - 80, behavior: 'smooth' });
+           // If mobile menu is open, close it
+           const dr = document.getElementById("menu-drawer");
+           if(dr && !dr.classList.contains("hidden")) dr.classList.add("hidden");
+        }
+      }
+    });
+
     input.addEventListener("input", (e) => {
       const term = e.target.value.trim();
       searchInputs.forEach(inp => { if(inp !== e.target) inp.value = term; });
       
       if (term.length > 0) {
         document.querySelectorAll(".filter-btn").forEach(x => x.classList.remove("active"));
-        document.querySelector('.filter-btn[data-filter="all"]').classList.add("active");
+        const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+        if(allBtn) allBtn.classList.add("active");
         currentFilter = "all";
-      }
-      
-      const portSection = document.getElementById("projects");
-      if (term.length > 2 && portSection && window.scrollY < (portSection.offsetTop - 200)) {
-        window.scrollTo({ top: portSection.offsetTop - 100, behavior: 'smooth' });
       }
       
       renderPortfolio("all", term);

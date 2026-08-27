@@ -2,52 +2,81 @@ const PORTFOLIO_DATA = {
   profile: {
     name: "SANDEEP",
     title: "Graphic Designer & Video Editor",
-    intro: "I create visually compelling designs and dynamic videos that elevate brands. Specializing in high-end visuals, motion graphics, and engaging digital content.",
+    subtitle: "CREATIVE DESIGNER • VIDEO EDITOR",
+    heroStatement: "I turn ideas into powerful visuals, brands into experiences, and videos into stories.",
+    heroIntro: "I create professional graphic designs, engaging thumbnails, social media creatives, posters, branding, advertisements and high-quality video content for brands, businesses and digital creators.",
+    aboutHeadline: "Creative Ideas. Powerful Visuals. Professional Results.",
+    aboutContent1: "Hi, I'm Sandeep — a passionate Graphic Designer and Video Editor with experience creating professional visual content for businesses, brands and digital creators.",
+    aboutContent2: "I work across multiple creative disciplines including graphic design, branding, thumbnails, posters, social media creatives, advertisements, short videos, reels, YouTube videos, promotional videos and full-length video editing.",
+    aboutContent3: "My goal is simple — understand the idea, transform it into a visually powerful concept and deliver creative work that looks professional and communicates clearly.",
     email: "sandeepjeripothula8@gmail.com",
-    phone: "+91 9542382894",
-    whatsapp: "https://wa.me/919542382894?text=Hi%20Sandeep,%20I%20want%20to%20discuss%20a%20project!",
+    phone: "9542382894",
+    whatsapp: "https://wa.me/919542382894",
     stats: [
+      { value: "30+", label: "Clients" },
+      { value: "500+", label: "Projects" },
+      { value: "5+", label: "Creative Tools" },
+      { value: "Design + Video", label: "Expertise" }
+    ],
+    experienceStats: [
       { value: "30+", label: "Happy Clients" },
-      { value: "500+", label: "Projects Done" },
-      { value: "5+", label: "Years Exp" }
+      { value: "500+", label: "Projects Completed" },
+      { value: "Multiple", label: "Creative Categories" },
+      { value: "Design + Video", label: "Professional Expertise" }
     ]
   },
   skills: [
-    { name: "Graphic Design", desc: "Crafting visually stunning digital and print designs.", icon: "fa-pen-nib" },
-    { name: "Video Editing", desc: "Professional storytelling through seamless cuts and effects.", icon: "fa-film" },
-    { name: "Branding", desc: "Building strong, memorable brand identities and logos.", icon: "fa-gem" },
-    { name: "Poster Design", desc: "Eye-catching promotional and event poster creatives.", icon: "fa-image" },
-    { name: "Social Media Design", desc: "Engaging posts tailored for maximum audience retention.", icon: "fa-share-nodes" },
-    { name: "Thumbnail Design", desc: "High-CTR YouTube thumbnails that grab attention.", icon: "fa-bolt" },
-    { name: "Advertisement Design", desc: "Conversion-focused ad creatives for campaigns.", icon: "fa-bullhorn" },
-    { name: "Motion Graphics", desc: "Smooth animations, intros, and dynamic titles.", icon: "fa-wand-magic-sparkles" },
-    { name: "Creative Visual Design", desc: "Innovative art direction and visual problem-solving.", icon: "fa-palette" }
+    { name: "Graphic Design", desc: "Creating professional visual designs for brands, businesses and digital platforms.", icon: "fa-pen-nib" },
+    { name: "Video Editing", desc: "Professional editing for short-form and long-form video content.", icon: "fa-film" },
+    { name: "Thumbnail Design", desc: "High-impact YouTube thumbnails designed to grab attention.", icon: "fa-image" },
+    { name: "Poster Design", desc: "Creative posters for products, businesses, events and promotions.", icon: "fa-file-image" },
+    { name: "Social Media Design", desc: "Professional social media creatives for digital platforms.", icon: "fa-share-nodes" },
+    { name: "Branding", desc: "Modern and consistent visual identity design.", icon: "fa-gem" },
+    { name: "Advertisement Design", desc: "Creative advertising visuals for products and businesses.", icon: "fa-bullhorn" },
+    { name: "Motion Graphics", desc: "Engaging animation, transitions and visual effects.", icon: "fa-wand-magic-sparkles" },
+    { name: "Creative Visual Design", desc: "Unique visual concepts combining creativity and communication.", icon: "fa-palette" }
   ],
   software: [
-    { name: "Adobe Photoshop", desc: "Advanced photo manipulation, compositing, and UI.", icon: "assets/images/ps-icon.svg", faClass: "fa-camera" },
-    { name: "Adobe Illustrator", desc: "Vector graphics, logos, and scalable illustrations.", icon: "assets/images/ai-icon.svg", faClass: "fa-bezier-curve" },
-    { name: "Adobe Premiere Pro", desc: "Timeline-based video editing, color grading, and audio.", icon: "assets/images/pr-icon.svg", faClass: "fa-video" },
-    { name: "Adobe After Effects", desc: "Cinematic visual effects and complex motion graphics.", icon: "assets/images/ae-icon.svg", faClass: "fa-layer-group" },
-    { name: "Canva", desc: "Quick-turnaround social templates and presentations.", icon: "assets/images/canva-icon.svg", faClass: "fa-object-group" }
+    { name: "Adobe Photoshop", desc: "Professional graphic design, image editing and photo manipulation.", icon: "assets/images/ps-icon.svg", faClass: "fa-camera" },
+    { name: "Adobe Illustrator", desc: "Branding, logos, vector graphics and professional illustrations.", icon: "assets/images/ai-icon.svg", faClass: "fa-bezier-curve" },
+    { name: "Canva", desc: "Social media designs, marketing creatives and fast digital content creation.", icon: "assets/images/canva-icon.svg", faClass: "fa-object-group" },
+    { name: "Adobe Premiere Pro", desc: "Professional video editing, storytelling, transitions and video production.", icon: "assets/images/pr-icon.svg", faClass: "fa-video" },
+    { name: "Adobe After Effects", desc: "Motion graphics, animation, visual effects and advanced video compositions.", icon: "assets/images/ae-icon.svg", faClass: "fa-layer-group" }
   ],
   services: [
-    { title: "Graphic Design", icon: "fa-pen-nib", desc: "High-quality visual content for digital and print mediums." },
-    { title: "Video Editing", icon: "fa-film", desc: "Professional editing for YouTube, short-form, and commercials." },
-    { title: "Thumbnail Design", icon: "fa-bolt", desc: "Click-worthy custom thumbnails for content creators." },
-    { title: "Poster Design", icon: "fa-image", desc: "Striking posters for events, movies, and marketing." },
-    { title: "Social Media Creatives", icon: "fa-share-nodes", desc: "Brand-aligned posts and stories to boost engagement." },
-    { title: "Branding", icon: "fa-gem", desc: "Complete visual identity, logo design, and brand guidelines." },
-    { title: "Motion Graphics", icon: "fa-wand-magic-sparkles", desc: "Engaging 2D animations and animated typography." },
-    { title: "Promotional Videos", icon: "fa-bullhorn", desc: "High-energy promo videos and product showcases." }
+    { title: "Graphic Design", desc: "Professional digital designs, advertisements and creative visuals.", icon: "fa-pen-nib" },
+    { title: "YouTube Thumbnails", desc: "Eye-catching and professional thumbnails designed for digital creators.", icon: "fa-image" },
+    { title: "Poster Design", desc: "Creative posters for products, brands, events and promotions.", icon: "fa-file-image" },
+    { title: "Social Media Creatives", desc: "Professional Instagram, Facebook and social media content.", icon: "fa-share-nodes" },
+    { title: "Branding & Visual Identity", desc: "Modern branding and visual identity solutions.", icon: "fa-gem" },
+    { title: "Video Editing", desc: "Professional short-form and long-form video editing.", icon: "fa-film" },
+    { title: "Reels & Short Videos", desc: "Engaging short-form content for social media platforms.", icon: "fa-mobile-screen" },
+    { title: "Full-Length Videos", desc: "Professional editing for YouTube and long-form content.", icon: "fa-video" },
+    { title: "Motion Graphics", desc: "Animations, transitions, effects and motion design.", icon: "fa-wand-magic-sparkles" },
+    { title: "Promotional Videos", desc: "Creative promotional videos for businesses and brands.", icon: "fa-bullhorn" }
+  ],
+  process: [
+    { step: "01", title: "Understand", desc: "Understand the client's brand, goals, requirements and creative direction." },
+    { step: "02", title: "Create", desc: "Develop concepts, visual direction and creative ideas." },
+    { step: "03", title: "Refine", desc: "Perfect typography, composition, colors, details and overall presentation." },
+    { step: "04", title: "Deliver", desc: "Deliver polished, professional and ready-to-use creative content." }
+  ],
+  whyMe: [
+    { title: "Creative Thinking", desc: "Unique visual concepts created for every project.", icon: "fa-lightbulb" },
+    { title: "Professional Quality", desc: "Strong attention to detail from concept to final output.", icon: "fa-award" },
+    { title: "Multi-Skilled", desc: "Graphic design, video editing, motion graphics and digital content.", icon: "fa-layer-group" },
+    { title: "Experienced", desc: "500+ completed creative projects across different categories.", icon: "fa-briefcase" },
+    { title: "Client-Focused", desc: "Designs and videos created according to each client's goals.", icon: "fa-bullseye" },
+    { title: "Reliable", desc: "Professional communication and organized creative workflow.", icon: "fa-handshake" }
   ],
   portfolio: [
-    { id: "p1", title: "Cyberpunk Poster Art", category: "Posters", image: "assets/images/poster_mockup.jpg", client: "Personal Concept" },
-    { id: "p2", title: "Tech Review Thumbnail", category: "Thumbnails", image: "assets/images/thumbnail_mockup.jpg", client: "TechVision" },
-    { id: "p3", title: "Streetwear Campaign", category: "Social Media Designs", image: "assets/images/social_mockup.jpg", client: "Urban Vibe" },
-    { id: "p4", title: "Luxury Brand Identity", category: "Branding", image: "assets/images/branding_mockup.jpg", client: "Aurelia" },
-    { id: "p5", title: "Sneaker Ad Creative", category: "Advertisements", image: "assets/images/social_mockup.jpg", client: "StepUp" },
-    { id: "p6", title: "Cinematic Vlog Edit", category: "Video Editing", image: "assets/images/video_editing_mockup.jpg", client: "Travelogue" },
-    { id: "p7", title: "3D Logo Animation", category: "Motion Graphics", image: "assets/images/motion_mockup.jpg", client: "Visions Media" },
-    { id: "p8", title: "Event Promo Flyer", category: "Posters", image: "assets/images/poster_mockup.jpg", client: "NightLife" }
+    { id: "p1", title: "Cyberpunk Poster Art", category: "Posters", image: "assets/images/poster_mockup.jpg", searchTerms: "poster photoshop graphic design" },
+    { id: "p2", title: "Tech Review Thumbnail", category: "Thumbnails", image: "assets/images/thumbnail_mockup.jpg", searchTerms: "thumbnail youtube video editing" },
+    { id: "p3", title: "Streetwear Campaign", category: "Social Media", image: "assets/images/social_mockup.jpg", searchTerms: "social media advertisement post" },
+    { id: "p4", title: "Luxury Brand Identity", category: "Branding", image: "assets/images/branding_mockup.jpg", searchTerms: "branding visual identity logo illustrator" },
+    { id: "p5", title: "Sneaker Ad Creative", category: "Advertisements", image: "assets/images/social_mockup.jpg", searchTerms: "advertisement promo marketing graphic design" },
+    { id: "p6", title: "Cinematic Vlog Edit", category: "Video Editing", image: "assets/images/video_editing_mockup.jpg", searchTerms: "video editing full video premiere pro" },
+    { id: "p7", title: "3D Logo Animation", category: "Motion Graphics", image: "assets/images/motion_mockup.jpg", searchTerms: "motion graphics animation after effects" },
+    { id: "p8", title: "Event Promo Flyer", category: "Posters", image: "assets/images/poster_mockup.jpg", searchTerms: "poster flyer graphic design event" }
   ]
 };

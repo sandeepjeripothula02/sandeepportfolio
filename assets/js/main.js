@@ -18,60 +18,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initIntro() {
   const overlay = document.getElementById('intro-overlay');
-  if (!overlay) return;
-  
   const robot = document.getElementById('robot-container');
   const bubble = document.getElementById('speech-bubble');
-  const enterBtn = document.getElementById('enter-btn');
-  const svg = document.getElementById('robot-svg');
+  const arm = document.getElementById('robot-arm');
+  const eyes = document.getElementById('robot-eyes');
+
+  if (!overlay || !robot) return;
 
   // Stop background scrolling initially
   document.body.style.overflow = 'hidden';
 
-  // 1. Slide robot in naturally
+  // 1. Robot appears smoothly in the center
   setTimeout(() => {
-    robot.style.transform = 'translateX(0)';
+    robot.style.opacity = '1';
+    robot.style.transform = 'scale(1)';
     robot.classList.add('robot-hover'); // Start hovering
-  }, 500);
+  }, 100);
 
-  // 2. Robot stops, makes a friendly face, speaks, and then opens website automatically
+  const openWebsite = () => {
+    overlay.style.opacity = '0';
+    document.body.style.overflow = ''; // Allow scrolling again
+    setTimeout(() => {
+      overlay.remove();
+      document.body.classList.remove('overflow-hidden');
+    }, 700);
+  };
+
+  const finishIntro = () => {
+    // 3. Move slightly to the side and gesture
+    robot.style.transform = 'scale(1) translateX(-40px)';
+    if (arm) arm.style.transform = 'rotate(-45deg)';
+    
+    // Open website right after gesture
+    setTimeout(openWebsite, 800);
+  };
+
+  // 2. Speak and show bubble
   setTimeout(() => {
-    // Show speech bubble
     bubble.style.opacity = '1';
     
     // Change SVG to friendly expression (squint eyes)
-    const eyes = document.getElementById('robot-eyes');
     if (eyes) {
       eyes.innerHTML = `
-        <path d="M42 58 Q47 52 52 58" stroke="#4ade80" stroke-width="4" stroke-linecap="round" fill="none"/>
-        <path d="M68 58 Q73 52 78 58" stroke="#4ade80" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M42 58 Q47 52 52 58" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M68 58 Q73 52 78 58" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" fill="none"/>
       `;
     }
-    
-    const openWebsite = () => {
-      overlay.style.opacity = '0';
-      document.body.style.overflow = ''; // Allow scrolling again
-      setTimeout(() => {
-        overlay.remove();
-        document.body.classList.remove('overflow-hidden');
-      }, 1000);
-    };
 
     let audioPlayed = false;
 
-    // Speak automatically as soon as it arrives!
+    // Speak automatically
     if ('speechSynthesis' in window) {
-      const msg = new SpeechSynthesisUtterance("Hi! Welcome to Sandeep Portfolio.");
+      const msg = new SpeechSynthesisUtterance("Hi! Welcome to Sandeep's Portfolio.");
       msg.voiceURI = 'native';
       msg.volume = 1;
-      msg.rate = 1.1; // Slightly faster/cute
-      msg.pitch = 1.5; // High pitch for robot
+      // Fast, energetic, robotic voice
+      msg.rate = 1.3; 
+      msg.pitch = 1.6; 
       
       msg.onstart = () => { audioPlayed = true; };
-      msg.onend = () => {
-        // Voice is complete! Open website automatically after a tiny pause
-        setTimeout(openWebsite, 400);
-      };
+      msg.onend = () => { finishIntro(); };
 
       try {
         window.speechSynthesis.speak(msg);
@@ -80,15 +86,14 @@ function initIntro() {
       }
     }
     
-    // Fallback: Because browsers often block autoplay audio if the user hasn't clicked anywhere yet,
-    // we make sure the website still opens automatically after 3 seconds if the audio gets blocked.
+    // Fallback: Ensure intro finishes quickly (in ~2.5s) if audio is blocked
     setTimeout(() => {
       if (!audioPlayed || window.speechSynthesis.speaking === false) {
-        openWebsite();
+        finishIntro();
       }
-    }, 3000);
+    }, 2000);
 
-  }, 2200);
+  }, 800);
 }
 
 function initParticles() {

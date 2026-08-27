@@ -1,594 +1,338 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Sandeep — Senior Graphic Designer & Video Editor | Creative Studio Portfolio</title>
-  <meta name="description" content="Official portfolio of Sandeep — Senior Graphic Designer and Video Editor specializing in branding, high-CTR YouTube thumbnails, posters, digital creatives, short-form reels, and cinematic video editing. Contact: +91 9545382894" />
-  
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%23d97706%22/><text y=%2265%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%23ffffff%22>S</text></svg>" type="image/svg+xml">
-
-  <!-- Tailwind CSS CDN -->
+  <title>Sandeep — Graphic Designer & Video Editor | Portfolio</title>
+  <meta name="description" content="Portfolio of Sandeep — Graphic Designer and Video Editor. Branding, thumbnails, posters, social media, video editing, motion graphics. Contact: +91 9545382894" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23015178%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%23E0AB47%22>S</text></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            warm: {
-              50: '#FEFBF5',
-              100: '#FEF5E2',
-              200: '#FDF0D5',
-              300: '#F5E6CA',
-              400: '#EAD7B2',
-              500: '#D4BE92'
-            },
-            brand: {
-              gold: '#d97706',
-              amber: '#b45309',
-              dark: '#1c1917'
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="bg-[#FEF5E2] text-stone-900 antialiased relative min-h-screen pb-20 md:pb-0">
+<body class="bg-white text-gray-900 antialiased pb-16 md:pb-0">
 
-  <!-- Floating WhatsApp Action Button -->
-  <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" rel="noopener noreferrer" class="whatsapp-float shadow-2xl flex items-center justify-center" title="Chat with Sandeep on WhatsApp (+91 9545382894)">
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- Mobile Bottom Action Dock -->
-  <div class="mobile-bottom-dock flex items-center justify-around gap-2 md:hidden">
-    <a href="tel:9545382894" class="flex-1 flex flex-col items-center justify-center py-1 px-2 rounded-xl bg-stone-900 text-white text-[11px] font-bold shadow-md">
-      <i class="fa-solid fa-phone text-xs mb-0.5"></i>
-      <span>Call</span>
+  <!-- Mobile Bottom Dock -->
+  <div class="mobile-dock flex items-center justify-around gap-2 md:hidden">
+    <a href="tel:9545382894" class="flex-1 flex flex-col items-center py-1.5 rounded-xl bg-[#015178] text-white text-[11px] font-semibold">
+      <i class="fa-solid fa-phone text-xs mb-0.5"></i>Call
     </a>
-    <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center py-1 px-2 rounded-xl bg-[#25D366] text-white text-[11px] font-bold shadow-md">
-      <i class="fa-brands fa-whatsapp text-xs mb-0.5"></i>
-      <span>WhatsApp</span>
+    <a href="https://wa.me/919545382894?text=Hi%20Sandeep!" target="_blank" class="flex-1 flex flex-col items-center py-1.5 rounded-xl bg-[#25D366] text-white text-[11px] font-semibold">
+      <i class="fa-brands fa-whatsapp text-xs mb-0.5"></i>WhatsApp
     </a>
-    <a href="mailto:sandeepjeripothula8@gmail.com" class="flex-1 flex flex-col items-center justify-center py-1 px-2 rounded-xl bg-amber-600 text-white text-[11px] font-bold shadow-md">
-      <i class="fa-solid fa-envelope text-xs mb-0.5"></i>
-      <span>Email</span>
+    <a href="mailto:sandeepjeripothula8@gmail.com" class="flex-1 flex flex-col items-center py-1.5 rounded-xl bg-[#E0AB47] text-white text-[11px] font-semibold">
+      <i class="fa-solid fa-envelope text-xs mb-0.5"></i>Email
     </a>
-    <button onclick="openInquiryModal()" class="flex-1 flex flex-col items-center justify-center py-1 px-2 rounded-xl bg-purple-700 text-white text-[11px] font-bold shadow-md">
-      <i class="fa-solid fa-paper-plane text-xs mb-0.5"></i>
-      <span>Hire</span>
+    <button onclick="openInquiry()" class="flex-1 flex flex-col items-center py-1.5 rounded-xl gradient-bg text-white text-[11px] font-semibold">
+      <i class="fa-solid fa-paper-plane text-xs mb-0.5"></i>Hire Me
     </button>
   </div>
 
-  <!-- Ambient Luxury Background Lighting -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div class="glow-warm-amber -top-40 -left-40 opacity-80"></div>
-    <div class="glow-warm-purple top-1/3 -right-40 opacity-70"></div>
-    <div class="absolute inset-0 bg-grid-warm opacity-60"></div>
-  </div>
-
-  <!-- Header / Navigation Bar -->
-  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-3.5 px-4 sm:px-8">
+  <!-- ═══ NAVBAR ═══ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8 bg-white/0">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-600 to-stone-900 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-amber-900/20 group-hover:scale-105 transition-transform">
-          S
-        </div>
-        <div class="flex flex-col">
-          <span class="font-black text-lg tracking-wider text-stone-900 font-heading group-hover:text-amber-800 transition-colors">SANDEEP</span>
-          <span class="text-[10px] uppercase font-mono-tag tracking-widest text-stone-600 font-bold">Design • Video</span>
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">S</div>
+        <div>
+          <span class="font-bold text-lg text-gray-900 tracking-tight">SANDEEP</span>
+          <span class="block text-[10px] font-semibold text-gray-500 tracking-widest uppercase -mt-0.5">Design · Video</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-1 bg-white/80 border border-amber-900/15 backdrop-blur-xl px-4 py-1.5 rounded-full shadow-md">
-        <a href="#work" class="px-3.5 py-1.5 text-xs font-semibold text-stone-700 hover:text-stone-950 hover:bg-stone-100 rounded-full transition-all">Work</a>
-        <a href="#services" class="px-3.5 py-1.5 text-xs font-semibold text-stone-700 hover:text-stone-950 hover:bg-stone-100 rounded-full transition-all">Services</a>
-        <a href="#skills" class="px-3.5 py-1.5 text-xs font-semibold text-stone-700 hover:text-stone-950 hover:bg-stone-100 rounded-full transition-all">Skills</a>
-        <a href="#about" class="px-3.5 py-1.5 text-xs font-semibold text-stone-700 hover:text-stone-950 hover:bg-stone-100 rounded-full transition-all">About</a>
-        <a href="#process" class="px-3.5 py-1.5 text-xs font-semibold text-stone-700 hover:text-stone-950 hover:bg-stone-100 rounded-full transition-all">Process</a>
-        <a href="#contact" class="px-3.5 py-1.5 text-xs font-semibold text-stone-700 hover:text-stone-950 hover:bg-stone-100 rounded-full transition-all">Contact</a>
+      <nav class="hidden md:flex items-center gap-1 bg-white border border-gray-200 px-4 py-1.5 rounded-full shadow-sm">
+        <a href="#portfolio" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Work</a>
+        <a href="#services" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Services</a>
+        <a href="#reviews" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Reviews</a>
+        <a href="#about" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">About</a>
+        <a href="#contact" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Contact</a>
       </nav>
 
-      <!-- Action & Phone/WhatsApp Header Bar -->
-      <div class="flex items-center gap-2.5">
-        <!-- Direct Phone Header Link -->
-        <a href="tel:9545382894" class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-stone-900 text-white text-xs font-bold shadow-md hover:bg-stone-800 transition-all">
-          <i class="fa-solid fa-phone text-amber-400 text-xs"></i>
-          <span>9545382894</span>
+      <div class="flex items-center gap-2">
+        <a href="tel:9545382894" class="hidden lg:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gray-100 text-gray-800 text-xs font-semibold hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-phone text-[#015178]"></i>9545382894
         </a>
-
-        <!-- Direct WhatsApp Header Link -->
-        <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-md hover:bg-[#20bd5a] transition-all">
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span>WhatsApp</span>
+        <a href="https://wa.me/919545382894?text=Hi%20Sandeep!" target="_blank" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#25D366] text-white text-xs font-semibold hover:bg-[#20bd5a] transition-colors">
+          <i class="fa-brands fa-whatsapp text-sm"></i>WhatsApp
         </a>
-
-        <button onclick="openInquiryModal()" class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs shadow-md transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        <button onclick="openInquiry()" class="gradient-btn px-4 py-2 rounded-xl text-xs flex items-center gap-1.5">
+          Let's Talk <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </button>
-
-        <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-stone-800 hover:text-black border border-amber-900/20" aria-label="Toggle Navigation">
-          <i class="fa-solid fa-bars text-base"></i>
+        <button id="menu-toggle" class="md:hidden w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu-drawer" class="hidden md:hidden max-w-7xl mx-auto mt-3 p-5 rounded-2xl glass-panel border border-amber-900/20 space-y-3 shadow-xl">
-      <div class="grid grid-cols-2 gap-2 pb-3 border-b border-stone-200">
-        <a href="tel:9545382894" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-stone-900 text-white text-xs font-bold">
-          <i class="fa-solid fa-phone text-amber-400"></i>
-          <span>9545382894</span>
+    <!-- Mobile Menu Drawer -->
+    <div id="menu-drawer" class="hidden md:hidden max-w-7xl mx-auto mt-3 p-5 rounded-2xl bg-white border border-gray-200 shadow-xl space-y-2">
+      <div class="grid grid-cols-2 gap-2 pb-3 border-b border-gray-100">
+        <a href="tel:9545382894" class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#015178] text-white text-xs font-semibold">
+          <i class="fa-solid fa-phone"></i>9545382894
         </a>
-        <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-[#25D366] text-white text-xs font-bold">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>WhatsApp</span>
+        <a href="https://wa.me/919545382894" target="_blank" class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-semibold">
+          <i class="fa-brands fa-whatsapp"></i>WhatsApp
         </a>
       </div>
-
-      <a href="#work" class="block px-4 py-2 rounded-xl text-sm font-semibold text-stone-800 hover:bg-amber-500/10">Portfolio Work</a>
-      <a href="#services" class="block px-4 py-2 rounded-xl text-sm font-semibold text-stone-800 hover:bg-amber-500/10">Services</a>
-      <a href="#skills" class="block px-4 py-2 rounded-xl text-sm font-semibold text-stone-800 hover:bg-amber-500/10">Skills & Software</a>
-      <a href="#about" class="block px-4 py-2 rounded-xl text-sm font-semibold text-stone-800 hover:bg-amber-500/10">About Sandeep</a>
-      <a href="#process" class="block px-4 py-2 rounded-xl text-sm font-semibold text-stone-800 hover:bg-amber-500/10">Creative Process</a>
-      <a href="#contact" class="block px-4 py-2 rounded-xl text-sm font-semibold text-stone-800 hover:bg-amber-500/10">Contact & Inquiry</a>
+      <a href="#portfolio" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50">Portfolio</a>
+      <a href="#services" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50">Services</a>
+      <a href="#reviews" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50">Reviews</a>
+      <a href="#about" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50">About</a>
+      <a href="#contact" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50">Contact</a>
     </div>
   </header>
 
-  <main class="relative z-10">
+  <main>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="min-h-screen pt-28 sm:pt-36 pb-16 px-4 sm:px-8 max-w-7xl mx-auto flex flex-col justify-center relative">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        
-        <div class="lg:col-span-7 flex flex-col items-start space-y-5">
-          
-          <!-- Role Pill Badge -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-amber-900/20 shadow-sm">
-            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 studio-pulse"></span>
-            <span class="text-xs font-mono-tag tracking-wider font-bold text-stone-800 uppercase">Senior Graphic Designer & Video Editor</span>
-          </div>
-
-          <!-- Hero Name & Title -->
-          <div class="space-y-1">
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-stone-900 font-heading tracking-tight leading-none">
-              <span class="profile-name block">SANDEEP</span>
-            </h1>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-stone-800 to-purple-800 font-heading">
-              <span class="profile-title">Graphic Designer & Video Editor</span>
-            </h2>
-          </div>
-
-          <!-- Professional Tagline -->
-          <p class="text-base sm:text-xl font-medium text-stone-700 italic border-l-3 border-amber-600 pl-4 py-1 profile-tagline">
-            “I turn ideas into powerful visuals, brands into experiences, and videos into stories.”
-          </p>
-
-          <!-- Short Introduction -->
-          <p class="text-sm sm:text-base text-stone-600 leading-relaxed max-w-2xl profile-intro">
-            Creative Graphic Designer and Video Editor specializing in branding, social media creatives, thumbnails, posters, digital designs, short-form videos, and full-length video editing.
-          </p>
-
-          <!-- Direct Phone & WhatsApp Callout Banner -->
-          <div class="flex flex-wrap items-center gap-3 p-3 rounded-2xl bg-white/90 border border-amber-900/20 shadow-sm w-full sm:w-auto">
-            <a href="tel:9545382894" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold transition-all shadow-sm">
-              <i class="fa-solid fa-phone text-amber-400"></i>
-              <span>+91 9545382894</span>
-            </a>
-            <button onclick="copyPhoneToClipboard()" class="p-2 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs transition-colors" title="Copy Phone Number">
-              <i class="fa-solid fa-copy"></i>
-            </button>
-            <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold transition-all shadow-sm">
-              <i class="fa-brands fa-whatsapp text-sm"></i>
-              <span>WhatsApp Chat</span>
-            </a>
-          </div>
-
-          <!-- CTAs Buttons -->
-          <div class="flex flex-wrap items-center gap-3.5 pt-2 w-full sm:w-auto">
-            <a href="#work" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm shadow-xl shadow-stone-900/15 transition-all flex items-center justify-center gap-3 group">
-              <span>View My Work</span>
-              <i class="fa-solid fa-arrow-down text-xs group-hover:translate-y-1 transition-transform"></i>
-            </a>
-
-            <button onclick="openInquiryModal()" class="w-full sm:w-auto px-7 py-3.5 rounded-xl glass-panel hover:bg-white border border-amber-900/25 text-stone-900 font-bold text-sm shadow-md transition-all flex items-center justify-center gap-3 group">
-              <span>Let’s Work Together</span>
-              <i class="fa-solid fa-paper-plane text-xs text-amber-700 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-            </button>
-          </div>
-
-          <!-- Professional Statistics Grid -->
-          <div id="hero-stats-container" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-4 w-full"></div>
-
-          <!-- Trust Badges -->
-          <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-stone-600">
-            <span class="flex items-center gap-1.5 font-semibold text-stone-800"><i class="fa-solid fa-circle-check text-amber-600 text-[11px]"></i> 30+ Clients</span>
-            <span class="text-stone-400">•</span>
-            <span class="flex items-center gap-1.5 font-semibold text-stone-800"><i class="fa-solid fa-circle-check text-amber-600 text-[11px]"></i> 500+ Projects Completed</span>
-            <span class="text-stone-400">•</span>
-            <span class="flex items-center gap-1.5 font-bold text-amber-900"><i class="fa-solid fa-gem text-amber-600 text-[11px]"></i> Creative • Professional • Reliable</span>
-          </div>
-
-        </div>
-
-        <!-- Hero Right Column (Sandeep Real Photo Showcase Card) -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-3xl overflow-hidden border-2 border-amber-900/20 shadow-2xl group bg-white">
-            <img src="assets/images/sandeep_profile.jpg" alt="Sandeep - Graphic Designer and Video Editor" class="w-full h-[460px] sm:h-[530px] object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-            
-            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent"></div>
-
-            <div class="absolute top-4 left-4 glass-panel-dark px-3.5 py-1.5 rounded-xl flex items-center gap-2 border border-white/20 shadow-xl floating-elem">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 studio-pulse"></span>
-              <span class="font-mono-tag text-xs font-bold text-white">ACTIVE DESIGNER & EDITOR</span>
-            </div>
-
-            <div class="absolute top-4 right-4 glass-panel-dark px-3 py-1.5 rounded-xl border border-white/20 shadow-xl font-mono-tag text-xs font-bold text-amber-300">
-              PRO SUITE
-            </div>
-
-            <!-- Bottom Overlay Bar -->
-            <div class="absolute bottom-4 left-4 right-4 glass-panel-dark p-4 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-xl">
-              <div class="flex items-center justify-between">
-                <div>
-                  <div class="text-xs uppercase tracking-wider text-amber-400 font-mono-tag font-bold">SANDEEP STUDIO</div>
-                  <div class="text-xs sm:text-sm font-bold text-white font-heading">Photoshop • Illustrator • Premiere • After Effects</div>
-                </div>
-                <div class="flex -space-x-2">
-                  <div class="w-7 h-7 rounded-lg bg-[#31A8FF] flex items-center justify-center text-white text-[10px] font-bold shadow-md">Ps</div>
-                  <div class="w-7 h-7 rounded-lg bg-[#FF9A00] flex items-center justify-center text-white text-[10px] font-bold shadow-md">Ai</div>
-                  <div class="w-7 h-7 rounded-lg bg-[#EA77FF] flex items-center justify-center text-white text-[10px] font-bold shadow-md">Pr</div>
-                  <div class="w-7 h-7 rounded-lg bg-[#9999FF] flex items-center justify-center text-white text-[10px] font-bold shadow-md">Ae</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="absolute -inset-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-60 -z-10"></div>
-        </div>
-
-      </div>
-    </section>
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-5 relative space-y-4">
-          <div class="glass-panel p-2 rounded-3xl border border-amber-900/15 overflow-hidden shadow-2xl">
-            <img src="assets/images/branding_mockup.jpg" alt="Sandeep Creative Brand Work" class="w-full h-80 sm:h-96 object-cover rounded-2xl" />
-          </div>
-          <div class="glass-panel p-5 rounded-2xl border border-amber-900/15 relative overflow-hidden">
-            <div class="flex items-center gap-3 mb-2">
-              <div class="w-10 h-10 rounded-lg bg-amber-600/15 flex items-center justify-center">
-                <i class="fa-solid fa-compass text-amber-700 text-lg"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-sm text-stone-900 font-heading">Design Philosophy</h4>
-                <p class="text-xs text-stone-500 font-mono-tag">CREATIVE PRINCIPLE</p>
-              </div>
-            </div>
-            <p class="text-xs text-stone-600 leading-relaxed">"Every design tells a story, every video builds a connection. My role is to make sure those stories are unforgettable and those connections are unbreakable."</p>
-          </div>
-        </div>
+    <!-- ═══ HERO ═══ -->
+    <section id="hero" class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-8 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#015178]/[0.03] via-white to-[#E0AB47]/[0.03]"></div>
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
 
         <div class="lg:col-span-7 space-y-6">
-          <div class="space-y-2">
-            <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">About Me</span>
-            <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading leading-tight">
-              I'm <span class="text-gradient-luxury">Sandeep</span>, a creative professional passionate about visual storytelling.
-            </h2>
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#015178]/5 border border-[#015178]/10">
+            <span class="w-2 h-2 rounded-full bg-[#E0AB47] pulse-dot"></span>
+            <span class="text-xs font-semibold text-[#015178] tracking-wider uppercase">Available for Projects</span>
           </div>
 
-          <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
-            With experience in both <strong class="text-stone-800">graphic design</strong> and <strong class="text-stone-800">video editing</strong>, 
-            I have worked with <strong class="text-stone-800">30+ clients</strong> delivering <strong class="text-stone-800">500+ creative projects</strong> 
-            — from brand identities and social media creatives to YouTube thumbnails, promotional videos, short-form reels, and full-length cinematic edits.
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+            <span class="text-gray-900">Hi, I'm </span>
+            <span class="gradient-text">Sandeep</span>
+          </h1>
+          <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-700">
+            Graphic Designer & Video Editor
+          </h2>
+
+          <p class="text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl">
+            I turn ideas into powerful visuals, brands into experiences, and videos into stories. Specializing in branding, social media, thumbnails, posters, and cinematic video editing.
           </p>
 
-          <p class="text-sm text-stone-600 leading-relaxed">
-            I believe in <strong class="text-stone-800">creative thinking</strong>, <strong class="text-stone-800">professional quality</strong>, and <strong class="text-stone-800">reliable delivery</strong>. 
-            Every project I take on is treated with the same level of care, precision, and dedication — whether it's a single thumbnail or a complete brand identity system.
-          </p>
+          <!-- Hero Contact Strip -->
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="tel:9545382894" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm font-semibold text-gray-800 transition-colors">
+              <i class="fa-solid fa-phone text-[#015178]"></i>+91 9545382894
+            </a>
+            <a href="https://wa.me/919545382894?text=Hi%20Sandeep!" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 text-sm font-semibold text-[#25D366] transition-colors">
+              <i class="fa-brands fa-whatsapp"></i>WhatsApp
+            </a>
+          </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
-            <div class="glass-panel p-5 rounded-2xl border border-amber-900/15">
-              <i class="fa-solid fa-palette text-amber-600 text-xl mb-3"></i>
-              <h4 class="font-bold text-sm text-stone-900 font-heading">Creative Vision</h4>
-              <p class="text-xs text-stone-600 mt-1">Unique concepts engineered for impact</p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#portfolio" class="gradient-btn px-7 py-3.5 rounded-xl text-sm flex items-center gap-2">
+              View My Work <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+            <button onclick="openInquiry()" class="px-7 py-3.5 rounded-xl border-2 border-gray-200 hover:border-[#015178] text-sm font-semibold text-gray-800 hover:text-[#015178] transition-all flex items-center gap-2">
+              Let's Work Together <i class="fa-solid fa-paper-plane text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden border border-gray-200 shadow-xl group">
+            <img src="assets/images/sandeep_profile.jpg" alt="Sandeep" class="w-full h-[420px] sm:h-[520px] object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#015178]/80 via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-xl bg-white/90 backdrop-blur-sm text-xs font-semibold text-[#015178] shadow-sm floating">
+              <i class="fa-solid fa-circle text-[#E0AB47] text-[8px] mr-1.5"></i>Creative Professional
             </div>
-            <div class="glass-panel p-5 rounded-2xl border border-amber-900/15">
-              <i class="fa-solid fa-gem text-purple-600 text-xl mb-3"></i>
-              <h4 class="font-bold text-sm text-stone-900 font-heading">Premium Quality</h4>
-              <p class="text-xs text-stone-600 mt-1">Pixel-perfect, frame-accurate delivery</p>
-            </div>
-            <div class="glass-panel p-5 rounded-2xl border border-amber-900/15">
-              <i class="fa-solid fa-handshake text-emerald-600 text-xl mb-3"></i>
-              <h4 class="font-bold text-sm text-stone-900 font-heading">Client-Focused</h4>
-              <p class="text-xs text-stone-600 mt-1">Your brand goals drive every decision</p>
+            <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg">
+              <div class="text-xs font-semibold text-[#E0AB47] tracking-wider uppercase mb-1">Sandeep Studio</div>
+              <div class="text-sm font-bold text-gray-900">Photoshop · Illustrator · Premiere · After Effects</div>
             </div>
           </div>
+          <div class="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#015178]/10 to-[#E0AB47]/10 blur-2xl -z-10"></div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS & SOFTWARE SECTION -->
-    <section id="skills" class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="text-center space-y-3 mb-14">
-        <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">Skills & Software</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading">Professional Software Suite</h2>
-        <p class="text-sm sm:text-base text-stone-600 max-w-2xl mx-auto">Mastering both graphic design and video editing tools to deliver complete visual solutions.</p>
-      </div>
+    <!-- ═══ STATS BAR ═══ -->
+    <section class="gradient-bg py-8 px-4 sm:px-8">
+      <div id="stats-grid" class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/20"></div>
+    </section>
 
-      <div id="software-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14"></div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="glass-panel p-6 rounded-2xl border border-amber-900/15">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-palette"></i></div>
-            <h3 class="text-lg font-bold text-stone-900 font-heading">Graphic Design</h3>
-          </div>
-          <div id="gd-skills-list" class="flex flex-wrap gap-2"></div>
+    <!-- ═══ SERVICES ═══ -->
+    <section id="services" class="py-20 sm:py-28 px-4 sm:px-8 bg-gray-50/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="section-tag">What I Do</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">My Services</h2>
+          <p class="text-gray-500 mt-3 max-w-xl mx-auto">Comprehensive creative services spanning graphic design, video editing, motion graphics, and brand identity.</p>
         </div>
-        <div class="glass-panel p-6 rounded-2xl border border-amber-900/15">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-video"></i></div>
-            <h3 class="text-lg font-bold text-stone-900 font-heading">Video Editing</h3>
-          </div>
-          <div id="ve-skills-list" class="flex flex-wrap gap-2"></div>
-        </div>
+        <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"></div>
       </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="text-center space-y-3 mb-14">
-        <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">My Services</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading">What I Can Create For You</h2>
-        <p class="text-sm sm:text-base text-stone-600 max-w-2xl mx-auto">Comprehensive creative services spanning graphic design, video editing, motion graphics, and brand visual identity.</p>
-      </div>
-      <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
-    </section>
-
-    <!-- PORTFOLIO SECTION -->
-    <section id="work" class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="text-center space-y-3 mb-10">
-        <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">Portfolio</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading">Selected Creative Work</h2>
-        <p class="text-sm sm:text-base text-stone-600 max-w-2xl mx-auto">Explore a curated selection of branding, design, and video editing projects.</p>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
-        <button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-stone-900 text-white shadow-sm transition-all" data-filter="all">All Work</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-white/80 text-stone-700 shadow-sm transition-all hover:bg-white" data-filter="graphic-design">Graphic Design</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-white/80 text-stone-700 shadow-sm transition-all hover:bg-white" data-filter="thumbnails">Thumbnails</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-white/80 text-stone-700 shadow-sm transition-all hover:bg-white" data-filter="posters">Posters</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-white/80 text-stone-700 shadow-sm transition-all hover:bg-white" data-filter="social-media">Social Media</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-white/80 text-stone-700 shadow-sm transition-all hover:bg-white" data-filter="branding">Branding</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-white/80 text-stone-700 shadow-sm transition-all hover:bg-white" data-filter="video-editing">Video Editing</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold border border-amber-900/15 bg-white/80 text-stone-700 shadow-sm transition-all hover:bg-white" data-filter="motion-graphics">Motion Graphics</button>
-      </div>
-
-      <div id="portfolio-masonry-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-    </section>
-
-    <!-- BEFORE / AFTER COMPARISON SECTION -->
-    <section class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="text-center space-y-3 mb-10">
-        <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">Before & After</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading">The Power of Professional Editing</h2>
-        <p class="text-sm sm:text-base text-stone-600 max-w-2xl mx-auto">Drag the slider to see the difference between raw footage and the final polished result.</p>
-      </div>
-
-      <div id="before-after-slider" class="comparison-container w-full max-w-4xl mx-auto rounded-3xl border-2 border-amber-900/20 shadow-2xl overflow-hidden relative h-[300px] sm:h-[400px] lg:h-[480px] cursor-ew-resize">
-        <img src="assets/images/video_editing_mockup.jpg" alt="After - Final Color Graded 4K Master" class="w-full h-full object-cover" />
-        <div class="comparison-before" style="width: 50%;">
-          <img src="assets/images/poster_mockup.jpg" alt="Before - Raw Unedited Footage" class="w-full h-full object-cover" style="min-width: 100vw; max-width: none;" />
+    <!-- ═══ PORTFOLIO ═══ -->
+    <section id="portfolio" class="py-20 sm:py-28 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Selected Creative Work</h2>
+          <p class="text-gray-500 mt-3 max-w-xl mx-auto">A curated collection of branding, design, and video editing projects.</p>
         </div>
-        <div class="comparison-handle" style="left: 50%;">
-          <div class="handle-circle">
-            <i class="fa-solid fa-arrows-left-right text-white text-sm"></i>
-          </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Branding">Branding</button>
+          <button class="filter-btn" data-filter="Thumbnails">Thumbnails</button>
+          <button class="filter-btn" data-filter="Posters">Posters</button>
+          <button class="filter-btn" data-filter="Social Media">Social Media</button>
+          <button class="filter-btn" data-filter="Advertisements">Advertisements</button>
+          <button class="filter-btn" data-filter="Video Editing">Video Editing</button>
+          <button class="filter-btn" data-filter="Short Videos">Short Videos</button>
+          <button class="filter-btn" data-filter="Full-Length Videos">Full-Length</button>
+          <button class="filter-btn" data-filter="Motion Graphics">Motion Graphics</button>
         </div>
-        <div class="absolute top-4 left-4 glass-panel-dark px-3 py-1 rounded-lg text-xs font-mono-tag text-white font-bold border border-white/15">BEFORE</div>
-        <div class="absolute top-4 right-4 glass-panel-dark px-3 py-1 rounded-lg text-xs font-mono-tag text-amber-300 font-bold border border-white/15">AFTER</div>
+
+        <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </div>
     </section>
 
-    <!-- EXPERIENCE STATS SECTION -->
-    <section id="experience-stats" class="py-16 sm:py-20 px-4 sm:px-8">
-      <div class="max-w-5xl mx-auto glass-panel-dark rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-          <div class="space-y-2">
-            <div class="text-4xl sm:text-5xl font-black text-white font-heading counter-val">30+</div>
-            <div class="text-sm font-bold text-amber-400 font-mono-tag uppercase tracking-wider">Clients Served</div>
-            <div class="text-xs text-stone-400">Across diverse industries</div>
+    <!-- ═══ BEFORE / AFTER ═══ -->
+    <section class="py-20 sm:py-28 px-4 sm:px-8 bg-gray-50/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="section-tag">Before & After</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">The Power of Professional Editing</h2>
+        </div>
+        <div id="ba-slider" class="comparison-container max-w-4xl mx-auto rounded-2xl border border-gray-200 shadow-xl overflow-hidden h-[260px] sm:h-[380px] lg:h-[460px]">
+          <img src="assets/images/video_editing_mockup.jpg" alt="After" class="w-full h-full object-cover" />
+          <div class="comparison-before" style="width:50%">
+            <img src="assets/images/poster_mockup.jpg" alt="Before" class="w-full h-full object-cover" style="min-width:100vw;max-width:none" />
           </div>
-          <div class="space-y-2">
-            <div class="text-4xl sm:text-5xl font-black text-white font-heading counter-val">500+</div>
-            <div class="text-sm font-bold text-amber-400 font-mono-tag uppercase tracking-wider">Projects Completed</div>
-            <div class="text-xs text-stone-400">Design & video editing</div>
+          <div class="comparison-handle" style="left:50%">
+            <div class="handle-circle"><i class="fa-solid fa-arrows-left-right text-white text-sm"></i></div>
           </div>
-          <div class="space-y-2">
-            <div class="text-4xl sm:text-5xl font-black text-white font-heading counter-val">99.4%</div>
-            <div class="text-sm font-bold text-amber-400 font-mono-tag uppercase tracking-wider">On-Time Delivery</div>
-            <div class="text-xs text-stone-400">Professional reliability</div>
-          </div>
+          <div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-black/60 text-white text-xs font-semibold backdrop-blur-sm">BEFORE</div>
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-lg gradient-bg text-white text-xs font-semibold">AFTER</div>
         </div>
       </div>
     </section>
 
-    <!-- CREATIVE PROCESS SECTION -->
-    <section id="process" class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="text-center space-y-3 mb-14">
-        <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">My Process</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading">How I Work</h2>
-        <p class="text-sm sm:text-base text-stone-600 max-w-2xl mx-auto">A structured 4-step creative workflow designed for professional results and client satisfaction.</p>
+    <!-- ═══ REVIEWS & SCORE ═══ -->
+    <section id="reviews" class="py-20 sm:py-28 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Client Reviews & Ratings</h2>
+          <p class="text-gray-500 mt-3 max-w-xl mx-auto">What my clients say about working with me.</p>
+        </div>
+
+        <!-- Score Badge -->
+        <div class="flex justify-center mb-14">
+          <div id="score-badge" class="score-badge w-full max-w-xs"></div>
+        </div>
+
+        <!-- Review Cards -->
+        <div id="reviews-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </div>
-      <div id="process-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
     </section>
 
-    <!-- WHY CHOOSE ME SECTION -->
-    <section class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="text-center space-y-3 mb-14">
-        <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">Why Work With Me</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading">What Makes Me Different</h2>
-        <p class="text-sm sm:text-base text-stone-600 max-w-2xl mx-auto">Core pillars that define every project I deliver.</p>
+    <!-- ═══ SKILLS ═══ -->
+    <section id="about" class="py-20 sm:py-28 px-4 sm:px-8 bg-gray-50/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="section-tag">Skills & Software</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Professional Toolkit</h2>
+        </div>
+        <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto"></div>
       </div>
-      <div id="why-choose-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-20 sm:py-28 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div class="text-center space-y-3 mb-14">
-        <span class="text-xs font-mono-tag text-amber-700 font-bold uppercase tracking-widest">Get In Touch</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-stone-900 font-heading">Let's Create Something Amazing</h2>
-        <p class="text-sm sm:text-base text-stone-600 max-w-2xl mx-auto">Have a project in mind? Reach out via phone, WhatsApp, email, or fill out the inquiry form below.</p>
+    <!-- ═══ PROCESS ═══ -->
+    <section id="process" class="py-20 sm:py-28 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="section-tag">My Process</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">How I Work</h2>
+        </div>
+        <div id="process-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto"></div>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- Contact Info Cards -->
-        <div class="lg:col-span-5 space-y-5">
-          <!-- Phone Card -->
-          <div class="glass-panel p-6 rounded-2xl border border-amber-900/15 hover:border-amber-900/30 transition-all group">
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-xl bg-stone-900 text-white flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform">
-                <i class="fa-solid fa-phone"></i>
-              </div>
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="py-20 sm:py-28 px-4 sm:px-8 bg-gray-50/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Let's Create Something Amazing</h2>
+          <p class="text-gray-500 mt-3 max-w-xl mx-auto">Reach out via phone, WhatsApp, email, or fill out the form below.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto">
+          <!-- Contact Cards -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="card p-5 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#015178] text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-phone"></i></div>
               <div class="flex-1">
-                <h3 class="font-bold text-stone-900 font-heading">Call Directly</h3>
-                <a href="tel:9545382894" class="text-amber-700 font-bold text-lg hover:text-amber-900 transition-colors profile-phone">+91 9545382894</a>
+                <p class="text-xs text-gray-500 font-semibold">Call Directly</p>
+                <a href="tel:9545382894" class="font-bold text-gray-900 hover:text-[#015178] transition-colors">+91 9545382894</a>
               </div>
-              <button onclick="copyPhoneToClipboard()" class="p-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors" title="Copy"><i class="fa-solid fa-copy"></i></button>
+              <button onclick="copyPhone()" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 transition-colors"><i class="fa-solid fa-copy text-sm"></i></button>
             </div>
-          </div>
 
-          <!-- WhatsApp Card -->
-          <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" rel="noopener noreferrer" class="glass-panel p-6 rounded-2xl border border-amber-900/15 hover:border-[#25D366]/50 transition-all group flex items-center gap-4 profile-whatsapp-btn">
-            <div class="w-14 h-14 rounded-xl bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform">
-              <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <div class="flex-1">
-              <h3 class="font-bold text-stone-900 font-heading">WhatsApp Chat</h3>
-              <p class="text-sm text-stone-600">Tap to start a conversation instantly</p>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square text-stone-400 group-hover:text-[#25D366] transition-colors"></i>
-          </a>
-
-          <!-- Email Card -->
-          <div class="glass-panel p-6 rounded-2xl border border-amber-900/15 hover:border-amber-900/30 transition-all group">
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
+            <a href="https://wa.me/919545382894?text=Hi%20Sandeep!" target="_blank" class="card p-5 flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center text-xl shadow-md group-hover:scale-110 transition-transform"><i class="fa-brands fa-whatsapp"></i></div>
               <div class="flex-1">
-                <h3 class="font-bold text-stone-900 font-heading">Email Me</h3>
-                <a href="mailto:sandeepjeripothula8@gmail.com" class="text-amber-700 font-semibold text-sm hover:text-amber-900 transition-colors profile-email break-all">sandeepjeripothula8@gmail.com</a>
+                <p class="text-xs text-gray-500 font-semibold">WhatsApp Chat</p>
+                <span class="font-bold text-gray-900">Tap to start a conversation</span>
               </div>
-              <button onclick="copyEmailToClipboard()" class="p-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors" title="Copy"><i class="fa-solid fa-copy"></i></button>
+              <i class="fa-solid fa-arrow-up-right-from-square text-gray-400 group-hover:text-[#25D366]"></i>
+            </a>
+
+            <div class="card p-5 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#E0AB47] text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-envelope"></i></div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs text-gray-500 font-semibold">Email Me</p>
+                <a href="mailto:sandeepjeripothula8@gmail.com" class="font-bold text-gray-900 hover:text-[#015178] transition-colors text-sm truncate block">sandeepjeripothula8@gmail.com</a>
+              </div>
+              <button onclick="copyEmail()" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 transition-colors"><i class="fa-solid fa-copy text-sm"></i></button>
             </div>
           </div>
 
-          <!-- Quick Action Buttons -->
-          <div class="glass-panel p-5 rounded-2xl border border-amber-900/15">
-            <h4 class="font-bold text-sm text-stone-900 font-heading mb-3">Quick Actions</h4>
-            <div class="grid grid-cols-2 gap-2.5">
-              <a href="tel:9545382894" class="py-3 px-4 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold text-center transition-all flex items-center justify-center gap-2 shadow-md">
-                <i class="fa-solid fa-phone text-amber-400"></i> Call Now
-              </a>
-              <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" class="py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold text-center transition-all flex items-center justify-center gap-2 shadow-md">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-              <a href="mailto:sandeepjeripothula8@gmail.com" class="py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold text-center transition-all flex items-center justify-center gap-2 shadow-md col-span-2">
-                <i class="fa-solid fa-envelope"></i> Send Email
-              </a>
+          <!-- Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="card p-6 sm:p-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-6">Send Project Inquiry</h3>
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="text-xs font-semibold text-gray-600 mb-1 block">Name *</label>
+                    <input id="f-name" type="text" placeholder="Your full name" required class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#015178] focus:ring-2 focus:ring-[#015178]/10 outline-none text-sm" />
+                  </div>
+                  <div>
+                    <label class="text-xs font-semibold text-gray-600 mb-1 block">Email</label>
+                    <input id="f-email" type="email" placeholder="your@email.com" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#015178] focus:ring-2 focus:ring-[#015178]/10 outline-none text-sm" />
+                  </div>
+                </div>
+                <div>
+                  <label class="text-xs font-semibold text-gray-600 mb-1 block">Service</label>
+                  <select id="f-service" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#015178] outline-none text-sm">
+                    <option>Graphic Design</option><option>YouTube Thumbnails</option><option>Poster Design</option>
+                    <option>Social Media Design</option><option>Branding & Identity</option><option>Advertisements</option>
+                    <option>Video Editing</option><option>Short Videos / Reels</option><option>Full-Length Videos</option>
+                    <option>Motion Graphics</option><option>Multiple Services</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="text-xs font-semibold text-gray-600 mb-1 block">Project Details *</label>
+                  <textarea id="f-message" rows="4" placeholder="Describe your project..." required class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#015178] focus:ring-2 focus:ring-[#015178]/10 outline-none text-sm resize-none"></textarea>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <button type="submit" class="w-full py-3 rounded-xl bg-[#015178] hover:bg-[#013a57] text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>Send via Email
+                  </button>
+                  <button type="button" onclick="sendWhatsApp()" class="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>Send via WhatsApp
+                  </button>
+                </div>
+              </form>
             </div>
-          </div>
-        </div>
-
-        <!-- Project Inquiry Form -->
-        <div class="lg:col-span-7">
-          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-amber-900/15 shadow-xl">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-paper-plane"></i></div>
-              <div>
-                <h3 class="text-xl font-bold text-stone-900 font-heading">Send Project Inquiry</h3>
-                <p class="text-xs text-stone-500 font-mono-tag">CHOOSE EMAIL OR WHATSAPP</p>
-              </div>
-            </div>
-
-            <form id="contact-project-form" class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="text-xs font-bold text-stone-700 mb-1 block">Your Name *</label>
-                  <input id="form-name" type="text" placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 outline-none text-sm text-stone-900 placeholder-stone-400 transition-all" required />
-                </div>
-                <div>
-                  <label class="text-xs font-bold text-stone-700 mb-1 block">Email Address</label>
-                  <input id="form-email" type="email" placeholder="your@email.com" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 outline-none text-sm text-stone-900 placeholder-stone-400 transition-all" />
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div>
-                  <label class="text-xs font-bold text-stone-700 mb-1 block">Service Type</label>
-                  <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 outline-none text-sm text-stone-900 transition-all">
-                    <option>Graphic Design</option>
-                    <option>YouTube Thumbnails</option>
-                    <option>Poster Design</option>
-                    <option>Social Media Design</option>
-                    <option>Branding & Identity</option>
-                    <option>Video Editing</option>
-                    <option>Motion Graphics</option>
-                    <option>Advertisement Videos</option>
-                    <option>Multiple Services</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="text-xs font-bold text-stone-700 mb-1 block">Timeline</label>
-                  <select id="form-timeline" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 outline-none text-sm text-stone-900 transition-all">
-                    <option>1-3 Days (Rush)</option>
-                    <option>1 Week</option>
-                    <option>2-3 Weeks</option>
-                    <option>1 Month+</option>
-                    <option>Flexible / Ongoing</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="text-xs font-bold text-stone-700 mb-1 block">Budget Range</label>
-                  <select id="form-budget" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 outline-none text-sm text-stone-900 transition-all">
-                    <option>Under 5,000</option>
-                    <option>5,000 - 15,000</option>
-                    <option>15,000 - 50,000</option>
-                    <option>50,000+</option>
-                    <option>Let's Discuss</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label class="text-xs font-bold text-stone-700 mb-1 block">Project Details *</label>
-                <textarea id="form-message" rows="4" placeholder="Describe your project requirements, goals, and any specific ideas you have in mind..." class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 outline-none text-sm text-stone-900 placeholder-stone-400 transition-all resize-none" required></textarea>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <button type="submit" class="w-full py-3.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
-                  <i class="fa-solid fa-envelope"></i>
-                  <span>Send via Email</span>
-                </button>
-                <button type="button" onclick="sendViaWhatsApp()" class="w-full py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
-                  <i class="fa-brands fa-whatsapp text-lg"></i>
-                  <span>Send via WhatsApp</span>
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       </div>
@@ -596,123 +340,79 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="relative z-10 border-t border-amber-900/15 py-10 px-4 sm:px-8 bg-white/50 backdrop-blur-sm">
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="border-t border-gray-200 py-8 px-4 sm:px-8 bg-white">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-600 to-stone-900 flex items-center justify-center text-white font-extrabold text-sm shadow-md">S</div>
-        <span class="font-bold text-sm text-stone-800 font-heading">SANDEEP STUDIO</span>
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-sm">S</div>
+        <span class="font-bold text-sm text-gray-800">SANDEEP STUDIO</span>
       </div>
-      <p class="text-xs text-stone-500 text-center">Designed with passion. All creative works showcased are original productions by Sandeep.</p>
-      <div class="flex items-center gap-3">
-        <a href="tel:9545382894" class="w-9 h-9 rounded-lg bg-stone-100 hover:bg-stone-900 hover:text-white text-stone-700 flex items-center justify-center text-sm transition-all border border-stone-200"><i class="fa-solid fa-phone"></i></a>
-        <a href="https://wa.me/919545382894" target="_blank" class="w-9 h-9 rounded-lg bg-stone-100 hover:bg-[#25D366] hover:text-white text-stone-700 flex items-center justify-center text-sm transition-all border border-stone-200"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="mailto:sandeepjeripothula8@gmail.com" class="w-9 h-9 rounded-lg bg-stone-100 hover:bg-amber-600 hover:text-white text-stone-700 flex items-center justify-center text-sm transition-all border border-stone-200"><i class="fa-solid fa-envelope"></i></a>
+      <p class="text-xs text-gray-400 text-center">Designed with passion. All creative works are original productions by Sandeep.</p>
+      <div class="flex items-center gap-2">
+        <a href="tel:9545382894" class="w-9 h-9 rounded-lg bg-gray-100 hover:bg-[#015178] hover:text-white text-gray-600 flex items-center justify-center transition-all"><i class="fa-solid fa-phone text-sm"></i></a>
+        <a href="https://wa.me/919545382894" target="_blank" class="w-9 h-9 rounded-lg bg-gray-100 hover:bg-[#25D366] hover:text-white text-gray-600 flex items-center justify-center transition-all"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+        <a href="mailto:sandeepjeripothula8@gmail.com" class="w-9 h-9 rounded-lg bg-gray-100 hover:bg-[#E0AB47] hover:text-white text-gray-600 flex items-center justify-center transition-all"><i class="fa-solid fa-envelope text-sm"></i></a>
       </div>
     </div>
   </footer>
 
-  <!-- PROJECT DETAIL MODAL -->
-  <div id="project-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm items-center justify-center p-4 sm:p-6 overflow-y-auto">
-    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-stone-200 shadow-2xl">
-      <button onclick="closeProjectModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 flex items-center justify-center text-lg transition-colors shadow-md">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <div id="modal-media-container" class="w-full"></div>
-
-      <div class="p-6 sm:p-8 space-y-5">
-        <div class="flex flex-wrap items-center gap-2">
-          <span id="modal-project-category" class="text-xs font-mono-tag font-bold px-3 py-1 rounded-full bg-amber-600/15 text-amber-900 border border-amber-600/25"></span>
-          <span id="modal-project-client" class="text-xs text-stone-500"></span>
-          <span class="text-xs text-stone-400">•</span>
-          <span id="modal-project-year" class="text-xs text-stone-500"></span>
-        </div>
-
-        <h2 id="modal-project-title" class="text-2xl sm:text-3xl font-black text-stone-900 font-heading leading-tight"></h2>
-        <p id="modal-project-desc" class="text-sm text-stone-600 leading-relaxed"></p>
-
-        <div class="glass-panel p-4 rounded-xl border border-amber-900/15">
-          <div class="text-xs font-mono-tag text-amber-700 font-bold mb-1 uppercase">Impact & Results</div>
-          <p id="modal-project-metrics" class="text-sm font-bold text-stone-900"></p>
-        </div>
-
-        <div class="space-y-2">
-          <div class="text-xs font-mono-tag text-stone-500 font-bold uppercase">Tools Used</div>
-          <div id="modal-project-tools" class="flex flex-wrap gap-2"></div>
-        </div>
-
-        <div class="space-y-2">
-          <div class="text-xs font-mono-tag text-stone-500 font-bold uppercase">Tags</div>
-          <div id="modal-project-tags" class="flex flex-wrap gap-2"></div>
-        </div>
-
-        <div class="pt-4 border-t border-stone-200 flex flex-wrap gap-3">
-          <button onclick="selectServiceForInquiry('Project Like This')" class="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold shadow-md transition-all flex items-center gap-2">
-            <i class="fa-solid fa-paper-plane"></i> Request Similar Project
+  <!-- ═══ PROJECT MODAL ═══ -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" onclick="if(event.target===this)closeProject()">
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="relative">
+        <img id="pm-img" src="" alt="" class="w-full h-64 sm:h-80 object-cover rounded-t-2xl" />
+        <button onclick="closeProject()" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-gray-800 flex items-center justify-center shadow-md"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="p-6 space-y-3">
+        <span id="pm-cat" class="text-xs font-semibold text-[#E0AB47] tracking-wider uppercase"></span>
+        <h2 id="pm-title" class="text-2xl font-bold text-gray-900"></h2>
+        <p id="pm-client" class="text-sm text-gray-500"></p>
+        <div class="pt-3 flex flex-wrap gap-3">
+          <button onclick="openInquiry('Similar Project')" class="px-5 py-2.5 rounded-xl bg-[#015178] text-white text-xs font-semibold shadow-md hover:bg-[#013a57] transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i>Request Similar
           </button>
-          <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20I%20am%20interested%20in%20a%20similar%20project!" target="_blank" class="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold shadow-md transition-all flex items-center gap-2">
-            <i class="fa-brands fa-whatsapp"></i> Discuss on WhatsApp
+          <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20want%20a%20similar%20project!" target="_blank" class="px-5 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-semibold shadow-md hover:bg-[#20bd5a] transition-colors flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i>Discuss on WhatsApp
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- INQUIRY MODAL -->
-  <div id="inquiry-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm items-center justify-center p-4 sm:p-6 overflow-y-auto" onclick="if(event.target===this)closeInquiryModal()">
-    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto relative border border-stone-200 shadow-2xl p-6 sm:p-8">
-      <button onclick="closeInquiryModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 flex items-center justify-center text-lg transition-colors">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl shadow-lg"><i class="fa-solid fa-handshake"></i></div>
-        <div>
-          <h3 class="text-xl font-bold text-stone-900 font-heading">Quick Inquiry</h3>
-          <p class="text-xs text-stone-500">Choose how you'd like to connect</p>
-        </div>
+  <!-- ═══ INQUIRY MODAL ═══ -->
+  <div id="inquiry-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" onclick="if(event.target===this)closeInquiry()">
+    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl p-6 sm:p-8">
+      <button onclick="closeInquiry()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg"><i class="fa-solid fa-handshake"></i></div>
+        <h3 class="text-xl font-bold text-gray-900">Quick Connect</h3>
+        <p class="text-sm text-gray-500 mt-1">Choose how you'd like to reach me</p>
       </div>
-
-      <div class="space-y-3 mb-5">
-        <div>
-          <label class="text-xs font-bold text-stone-700 mb-1 block">Service</label>
-          <select id="inquiry-service-type" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 focus:border-amber-600 outline-none text-sm text-stone-900">
-            <option>Graphic Design</option>
-            <option>YouTube Thumbnails</option>
-            <option>Poster Design</option>
-            <option>Social Media Design</option>
-            <option>Branding & Identity</option>
-            <option>Video Editing</option>
-            <option>Motion Graphics</option>
-            <option>Advertisement Videos</option>
-            <option>Multiple Services</option>
-          </select>
-        </div>
+      <div class="space-y-3 mb-4">
+        <select id="iq-service" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-medium outline-none focus:border-[#015178]">
+          <option>Graphic Design</option><option>YouTube Thumbnails</option><option>Poster Design</option>
+          <option>Social Media Design</option><option>Branding & Identity</option><option>Advertisements</option>
+          <option>Video Editing</option><option>Short Videos / Reels</option><option>Full-Length Videos</option>
+          <option>Motion Graphics</option><option>Multiple Services</option>
+        </select>
       </div>
-
-      <div class="space-y-3">
-        <a href="tel:9545382894" class="w-full py-3.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-3">
-          <i class="fa-solid fa-phone text-amber-400"></i>
-          <span>Call +91 9545382894</span>
+      <div class="space-y-2.5">
+        <a href="tel:9545382894" class="w-full py-3 rounded-xl bg-[#015178] text-white font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#013a57] transition-colors">
+          <i class="fa-solid fa-phone"></i>Call +91 9545382894
         </a>
-        <a href="https://wa.me/919545382894?text=Hi%20Sandeep,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20creative%20project!" target="_blank" class="w-full py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-3">
-          <i class="fa-brands fa-whatsapp text-lg"></i>
-          <span>Chat on WhatsApp</span>
+        <a href="https://wa.me/919545382894?text=Hi%20Sandeep!" target="_blank" class="w-full py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors">
+          <i class="fa-brands fa-whatsapp text-lg"></i>Chat on WhatsApp
         </a>
-        <a href="mailto:sandeepjeripothula8@gmail.com" class="w-full py-3.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-3">
-          <i class="fa-solid fa-envelope"></i>
-          <span>Send Email</span>
+        <a href="mailto:sandeepjeripothula8@gmail.com" class="w-full py-3 rounded-xl bg-[#E0AB47] text-white font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#c4932e] transition-colors">
+          <i class="fa-solid fa-envelope"></i>Send Email
         </a>
-        <a href="#contact" onclick="closeInquiryModal()" class="w-full py-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-sm transition-all flex items-center justify-center gap-2 border border-stone-200">
-          <i class="fa-solid fa-file-lines text-stone-500"></i>
-          <span>Fill Detailed Brief Form</span>
+        <a href="#contact" onclick="closeInquiry()" class="w-full py-3 rounded-xl bg-gray-100 text-gray-700 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-file-lines text-gray-500"></i>Fill Detailed Form
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="assets/js/portfolio-data.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

@@ -34,7 +34,7 @@ function initIntro() {
     robot.classList.add('robot-hover'); // Start hovering
   }, 500);
 
-  // 2. Robot stops, makes a friendly face, speaks and button appears
+  // 2. Robot stops, makes a friendly face, speaks, and then opens website automatically
   setTimeout(() => {
     // Show speech bubble
     bubble.style.opacity = '1';
@@ -48,6 +48,17 @@ function initIntro() {
       `;
     }
     
+    const openWebsite = () => {
+      overlay.style.opacity = '0';
+      document.body.style.overflow = ''; // Allow scrolling again
+      setTimeout(() => {
+        overlay.remove();
+        document.body.classList.remove('overflow-hidden');
+      }, 1000);
+    };
+
+    let audioPlayed = false;
+
     // Speak automatically as soon as it arrives!
     if ('speechSynthesis' in window) {
       const msg = new SpeechSynthesisUtterance("Hi! Welcome to Sandeep Portfolio.");
@@ -56,7 +67,12 @@ function initIntro() {
       msg.rate = 1.1; // Slightly faster/cute
       msg.pitch = 1.5; // High pitch for robot
       
-      // We wrap it in a try-catch because some browsers block autoplay audio without user interaction
+      msg.onstart = () => { audioPlayed = true; };
+      msg.onend = () => {
+        // Voice is complete! Open website automatically after a tiny pause
+        setTimeout(openWebsite, 400);
+      };
+
       try {
         window.speechSynthesis.speak(msg);
       } catch (e) {
@@ -64,23 +80,15 @@ function initIntro() {
       }
     }
     
-    // Show enter button
+    // Fallback: Because browsers often block autoplay audio if the user hasn't clicked anywhere yet,
+    // we make sure the website still opens automatically after 3 seconds if the audio gets blocked.
     setTimeout(() => {
-      enterBtn.style.opacity = '1';
-    }, 800);
-  }, 2200);
+      if (!audioPlayed || window.speechSynthesis.speaking === false) {
+        openWebsite();
+      }
+    }, 3000);
 
-  // 3. Enter Button Click (Fade out)
-  enterBtn.addEventListener('click', () => {
-    // Fade out overlay
-    overlay.style.opacity = '0';
-    document.body.style.overflow = ''; // Allow scrolling again
-    
-    setTimeout(() => {
-      overlay.remove();
-      document.body.classList.remove('overflow-hidden');
-    }, 1000);
-  });
+  }, 2200);
 }
 
 function initParticles() {

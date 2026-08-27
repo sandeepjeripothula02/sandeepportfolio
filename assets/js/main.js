@@ -132,9 +132,14 @@ function renderProcess() {
   const c = document.getElementById("process-grid");
   if (!c) return;
   c.innerHTML = PORTFOLIO_DATA.process.map(p => `
-    <div class="process-step reveal" data-step="${p.step}">
-      <h3 class="font-bold text-white text-xl mb-3 tracking-tight">${p.title}</h3>
-      <p class="text-gray-400 text-sm leading-relaxed max-w-md">${p.desc}</p>
+    <div class="glass-card p-8 group hover:-translate-y-2 transition-all duration-300 reveal">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-bold text-white text-2xl tracking-tight group-hover:text-blue-300 transition-colors">${p.title}</h3>
+        <div class="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-white shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:scale-110 group-hover:bg-white/10 group-hover:border-white/30 transition-all duration-500">
+          ${p.step}
+        </div>
+      </div>
+      <p class="text-gray-400 text-sm leading-relaxed">${p.desc}</p>
     </div>
   `).join("");
 }

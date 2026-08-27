@@ -77,7 +77,6 @@ const PORTFOLIO_DATA = {
     { title: "Reliable", desc: "Professional communication and organized creative workflow.", icon: "fa-handshake" }
   ],
   portfolio: [
-    { id: "p1", title: "Monster Audio Ad", category: "Advertisements", image: "assets/images/portfolio/earbuds.png", searchTerms: "poster photoshop graphic design earphone earbuds audio" },
     { id: "p2", title: "Himalaya Face Wash", category: "Posters", image: "assets/images/portfolio/facewash.jpg", searchTerms: "poster product social media face wash skincare" },
     { id: "p3", title: "Vitamin C Serum Promo", category: "Social Media", image: "assets/images/portfolio/serum1.jpg", searchTerms: "social media advertisement product serum orange" },
     { id: "p4", title: "Glowora Skin Care", category: "Branding", image: "assets/images/portfolio/serum2.jpg", searchTerms: "branding visual identity skincare product" },

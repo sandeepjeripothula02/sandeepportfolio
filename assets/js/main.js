@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  initIntro();
   renderStats();
   renderAboutStats();
   renderSkills();
@@ -14,6 +15,68 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollAnimations();
   initParticles();
 });
+
+function initIntro() {
+  const overlay = document.getElementById('intro-overlay');
+  if (!overlay) return;
+  
+  const robot = document.getElementById('robot-container');
+  const bubble = document.getElementById('speech-bubble');
+  const enterBtn = document.getElementById('enter-btn');
+  const svg = document.getElementById('robot-svg');
+
+  // Stop background scrolling initially
+  document.body.style.overflow = 'hidden';
+
+  // 1. Slide robot in naturally
+  setTimeout(() => {
+    robot.style.transform = 'translateX(0)';
+    robot.classList.add('robot-hover'); // Start hovering
+  }, 500);
+
+  // 2. Robot stops, makes a friendly face, speaks and button appears
+  setTimeout(() => {
+    // Show speech bubble
+    bubble.style.opacity = '1';
+    
+    // Change SVG to friendly expression (squint eyes)
+    const eyes = document.getElementById('robot-eyes');
+    if (eyes) {
+      eyes.innerHTML = `
+        <path d="M42 58 Q47 52 52 58" stroke="#4ade80" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M68 58 Q73 52 78 58" stroke="#4ade80" stroke-width="4" stroke-linecap="round" fill="none"/>
+      `;
+    }
+    
+    // Show enter button
+    setTimeout(() => {
+      enterBtn.style.opacity = '1';
+    }, 800);
+  }, 2200);
+
+  // 3. Enter Button Click (Audio & Fade out)
+  enterBtn.addEventListener('click', () => {
+    // Speak using Web Speech API
+    if ('speechSynthesis' in window) {
+      const msg = new SpeechSynthesisUtterance("Hi! Welcome to Sandeep Portfolio.");
+      msg.voiceURI = 'native';
+      msg.volume = 1;
+      msg.rate = 1.1; // Slightly faster/cute
+      msg.pitch = 1.5; // High pitch for robot
+      window.speechSynthesis.speak(msg);
+    }
+
+    // Fade out overlay
+    overlay.style.opacity = '0';
+    document.body.style.overflow = ''; // Allow scrolling again
+    
+    setTimeout(() => {
+      overlay.remove();
+      // Trigger scroll animations for hero section
+      document.body.classList.remove('overflow-hidden');
+    }, 1000);
+  });
+}
 
 function initParticles() {
   if (typeof particlesJS !== 'undefined') {

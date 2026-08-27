@@ -3,272 +3,243 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-  <title>Sandeep — Graphic Designer & Video Editor</title>
-  <meta name="description" content="Portfolio of Sandeep — Graphic Designer and Video Editor. Contact: 9542382894"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23015178%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%23E0AB47%22>S</text></svg>"/>
+  <title>Sandeep — Premium Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23001524%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%23ffffff%22>S</text></svg>"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
-<body class="bg-[#ACC0FE] text-gray-900 antialiased pb-16 md:pb-0">
+<body class="antialiased text-white pb-16 md:pb-0 relative">
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/919542382894?text=Hi%20Sandeep,%20I%20want%20to%20discuss%20a%20project!" target="_blank" class="whatsapp-float"><i class="fa-brands fa-whatsapp"></i></a>
+  <!-- Floating Glow Orbs for background depth -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
-  <!-- Mobile Dock -->
-  <div class="mobile-dock flex items-center justify-around gap-2 md:hidden">
-    <a href="tel:9542382894" class="flex-1 flex flex-col items-center py-1.5 rounded-xl bg-[#015178] text-white text-[11px] font-semibold"><i class="fa-solid fa-phone text-xs mb-0.5"></i>Call</a>
-    <a href="https://wa.me/919542382894" target="_blank" class="flex-1 flex flex-col items-center py-1.5 rounded-xl bg-[#25D366] text-white text-[11px] font-semibold"><i class="fa-brands fa-whatsapp text-xs mb-0.5"></i>WhatsApp</a>
-    <a href="mailto:sandeepjeripothula8@gmail.com" class="flex-1 flex flex-col items-center py-1.5 rounded-xl bg-[#E0AB47] text-white text-[11px] font-semibold"><i class="fa-solid fa-envelope text-xs mb-0.5"></i>Email</a>
-    <button onclick="openInquiry()" class="flex-1 flex flex-col items-center py-1.5 rounded-xl gradient-bg text-white text-[11px] font-semibold"><i class="fa-solid fa-paper-plane text-xs mb-0.5"></i>Hire</button>
-  </div>
-
-  <!-- NAVBAR -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-2.5 group">
-        <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">S</div>
-        <div><span class="font-bold text-lg text-gray-900 tracking-tight">SANDEEP</span><span class="block text-[10px] font-semibold text-gray-500 tracking-widest uppercase -mt-0.5">Design · Video</span></div>
+  <!-- HEADER -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 px-4 sm:px-8 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white font-extrabold text-lg shadow-lg group-hover:bg-white group-hover:text-[#001524] transition-all">S</div>
+        <div class="hidden sm:block">
+          <span class="font-bold text-lg text-white tracking-wide block leading-none">SANDEEP</span>
+          <span class="text-[9px] font-semibold text-gray-400 tracking-[0.2em] uppercase">Creative Studio</span>
+        </div>
       </a>
-      <nav class="hidden md:flex items-center gap-1 bg-white border border-gray-200 px-4 py-1.5 rounded-full shadow-sm">
-        <a href="#portfolio" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Work</a>
-        <a href="#services" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Services</a>
-        <a href="#reviews" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Reviews</a>
-        <a href="#about" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">About</a>
-        <a href="#contact" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-[#015178] rounded-full transition-colors">Contact</a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1.5 rounded-full backdrop-blur-md shadow-lg">
+        <a href="#hero" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-full transition-colors">Home</a>
+        <a href="#about" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-full transition-colors">About</a>
+        <a href="#skills" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-full transition-colors">Skills</a>
+        <a href="#software" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-full transition-colors">Software</a>
+        <a href="#projects" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-full transition-colors">Projects</a>
+        <a href="#services" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-full transition-colors">Services</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <a href="tel:9542382894" class="hidden lg:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#ACC0FE]/20 text-[#015178] text-xs font-semibold hover:bg-[#ACC0FE]/40 transition-colors border border-[#ACC0FE]/30"><i class="fa-solid fa-phone"></i>9542382894</a>
-        <a href="https://wa.me/919542382894" target="_blank" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#25D366] text-white text-xs font-semibold hover:bg-[#20bd5a] transition-colors"><i class="fa-brands fa-whatsapp text-sm"></i>WhatsApp</a>
-        <button onclick="openInquiry()" class="gradient-btn px-4 py-2 rounded-xl text-xs flex items-center gap-1.5">Let's Talk <i class="fa-solid fa-arrow-right text-[10px]"></i></button>
-        <button id="menu-toggle" class="md:hidden w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-gray-700"><i class="fa-solid fa-bars"></i></button>
+
+      <!-- Search & Contact Actions -->
+      <div class="flex items-center gap-3 w-full justify-end lg:w-auto">
+        <div class="relative search-container hidden md:block w-48 xl:w-64">
+          <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-white/50 text-sm"></i>
+          <input id="search-input" type="text" placeholder="Search projects, skills..." class="w-full py-2.5 pl-10 pr-4 rounded-full text-sm placeholder-white/40 focus:w-72 transition-all duration-300"/>
+        </div>
+        <a href="#contact" class="hidden sm:flex btn-primary text-sm px-5 py-2.5 rounded-full whitespace-nowrap">Contact Me</a>
+        <button id="menu-toggle" class="lg:hidden w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
-    <div id="menu-drawer" class="hidden md:hidden max-w-7xl mx-auto mt-3 p-5 rounded-2xl bg-white border border-gray-200 shadow-xl space-y-2">
-      <div class="grid grid-cols-2 gap-2 pb-3 border-b border-gray-100">
-        <a href="tel:9542382894" class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#015178] text-white text-xs font-semibold"><i class="fa-solid fa-phone"></i>9542382894</a>
-        <a href="https://wa.me/919542382894" target="_blank" class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-semibold"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="menu-drawer" class="hidden lg:hidden max-w-7xl mx-auto mt-3 p-5 rounded-2xl bg-[#001524]/95 backdrop-blur-xl border border-white/10 shadow-2xl space-y-2">
+      <div class="relative search-container mb-4">
+        <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-white/50 text-sm"></i>
+        <input type="text" placeholder="Search projects..." class="w-full py-3 pl-10 pr-4 rounded-xl text-sm"/>
       </div>
-      <a href="#portfolio" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#ACC0FE]/10">Portfolio</a>
-      <a href="#services" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#ACC0FE]/10">Services</a>
-      <a href="#reviews" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#ACC0FE]/10">Reviews</a>
-      <a href="#about" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#ACC0FE]/10">About</a>
-      <a href="#contact" class="block px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#ACC0FE]/10">Contact</a>
+      <a href="#hero" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white">Home</a>
+      <a href="#about" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white">About</a>
+      <a href="#skills" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white">Skills</a>
+      <a href="#software" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white">Software</a>
+      <a href="#projects" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white">Projects</a>
+      <a href="#services" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white">Services</a>
+      <div class="pt-3 border-t border-white/10 mt-3">
+        <a href="#contact" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white text-[#001524] font-bold text-sm"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="hero" class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-8 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#ACC0FE] via-[#c0d0ff] to-[#ACC0FE]"></div>
-      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ACC0FE]/15 border border-[#ACC0FE]/25">
-            <span class="w-2 h-2 rounded-full bg-[#E0AB47] pulse-dot"></span>
-            <span class="text-xs font-semibold text-[#015178] tracking-wider uppercase">Available for Projects</span>
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-8 relative">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+        <div class="space-y-8 fade-up">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-xs font-semibold tracking-wider uppercase text-gray-300">
+            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Available for Work
           </div>
-          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-            <span class="text-gray-900">Hi, I'm </span><span class="gradient-text">Sandeep</span>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight">
+            Elevate Your <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white/70">Visual Identity.</span>
           </h1>
-          <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-700">Graphic Designer & Video Editor</h2>
-          <p class="text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl">I turn ideas into powerful visuals, brands into experiences, and videos into stories.</p>
-
-          <!-- Expertise Tags -->
-          <div id="expertise-tags" class="flex flex-wrap gap-2"></div>
-
-          <!-- Hero Contact -->
-          <div class="flex flex-wrap items-center gap-3">
-            <a href="tel:9542382894" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#ACC0FE]/15 hover:bg-[#ACC0FE]/30 text-sm font-semibold text-[#015178] transition-colors border border-[#ACC0FE]/25">
-              <i class="fa-solid fa-phone"></i>+91 9542382894
-            </a>
-            <a href="https://wa.me/919542382894" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 text-sm font-semibold text-[#25D366] transition-colors">
-              <i class="fa-brands fa-whatsapp"></i>WhatsApp
-            </a>
-          </div>
-
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="#portfolio" class="gradient-btn px-7 py-3.5 rounded-xl text-sm flex items-center gap-2">View My Work <i class="fa-solid fa-arrow-down text-xs"></i></a>
-            <button onclick="openInquiry()" class="px-7 py-3.5 rounded-xl border-2 border-[#ACC0FE]/40 hover:border-[#015178] text-sm font-semibold text-gray-800 hover:text-[#015178] transition-all flex items-center gap-2 bg-[#ACC0FE]/5">Contact Me <i class="fa-solid fa-paper-plane text-xs"></i></button>
+          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-lg font-medium">
+            Professional Graphic Designer & Video Editor specializing in high-end visuals, motion graphics, and engaging digital content.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#projects" class="btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="btn-secondary">Contact Me</a>
           </div>
         </div>
 
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-3xl overflow-hidden border border-[#ACC0FE]/30 shadow-xl group">
-            <img src="assets/images/sandeep_profile.jpg" alt="Sandeep" class="w-full h-[420px] sm:h-[520px] object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#015178]/80 via-transparent to-transparent"></div>
-            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-xl bg-white/90 backdrop-blur-sm text-xs font-semibold text-[#015178] shadow-sm floating"><i class="fa-solid fa-circle text-[#E0AB47] text-[8px] mr-1.5"></i>Creative Professional</div>
-            <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg">
-              <div class="text-xs font-semibold text-[#E0AB47] tracking-wider uppercase mb-1">Sandeep Studio</div>
-              <div class="text-sm font-bold text-gray-900">Photoshop · Illustrator · Premiere · After Effects</div>
-            </div>
-          </div>
-          <div class="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#015178]/10 via-[#ACC0FE]/10 to-[#E0AB47]/10 blur-2xl -z-10"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS -->
-    <section class="gradient-bg py-8 px-4 sm:px-8"><div id="stats-grid" class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/20"></div></section>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-20 sm:py-28 px-4 sm:px-8 bg-white/30">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14"><span class="section-tag">What I Do</span><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">My Services</h2><p class="text-gray-500 mt-3 max-w-xl mx-auto">Comprehensive creative services for your brand and content.</p></div>
-        <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"></div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="py-20 sm:py-28 px-4 sm:px-8">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-10"><span class="section-tag">Portfolio</span><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Selected Creative Work</h2></div>
-        <div class="flex flex-wrap justify-center gap-2 mb-10">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="Graphic Design">Graphic Design</button>
-          <button class="filter-btn" data-filter="Posters">Posters</button>
-          <button class="filter-btn" data-filter="Thumbnails">Thumbnails</button>
-          <button class="filter-btn" data-filter="Social Media Posts">Social Media</button>
-          <button class="filter-btn" data-filter="Branding">Branding</button>
-          <button class="filter-btn" data-filter="Advertisements">Ads</button>
-          <button class="filter-btn" data-filter="Video Editing">Video Editing</button>
-          <button class="filter-btn" data-filter="Reels / Short Videos">Reels</button>
-          <button class="filter-btn" data-filter="Full Videos">Full Videos</button>
-          <button class="filter-btn" data-filter="Motion Graphics">Motion</button>
-        </div>
-        <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="py-20 sm:py-28 px-4 sm:px-8 bg-white/30">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14"><span class="section-tag">Testimonials</span><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Client Reviews & Ratings</h2></div>
-        <div class="flex justify-center mb-14"><div id="score-badge" class="score-badge w-full max-w-xs"></div></div>
-        <div id="reviews-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="about" class="py-20 sm:py-28 px-4 sm:px-8">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14"><span class="section-tag">Skills & Software</span><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Professional Toolkit</h2></div>
-        <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto"></div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="py-20 sm:py-28 px-4 sm:px-8 bg-white/30">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14"><span class="section-tag">My Process</span><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">How I Work</h2></div>
-        <div id="process-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto"></div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 sm:py-28 px-4 sm:px-8">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14"><span class="section-tag">Get In Touch</span><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Contact Me</h2><p class="text-gray-500 mt-3 max-w-xl mx-auto">Have a project in mind? Reach out via phone, WhatsApp, or email.</p></div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto">
-          <div class="lg:col-span-5 space-y-4">
-            <div class="card p-5 flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#015178] text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-phone"></i></div>
-              <div class="flex-1"><p class="text-xs text-gray-500 font-semibold">Call Directly</p><a href="tel:9542382894" class="font-bold text-gray-900 hover:text-[#015178] transition-colors">+91 9542382894</a></div>
-              <button onclick="copyPhone()" class="p-2 rounded-lg bg-[#ACC0FE]/15 hover:bg-[#ACC0FE]/30 text-[#015178] transition-colors"><i class="fa-solid fa-copy text-sm"></i></button>
-            </div>
-            <a href="https://wa.me/919542382894" target="_blank" class="card p-5 flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center text-xl shadow-md group-hover:scale-110 transition-transform"><i class="fa-brands fa-whatsapp"></i></div>
-              <div class="flex-1"><p class="text-xs text-gray-500 font-semibold">WhatsApp Chat</p><span class="font-bold text-gray-900">Tap to start conversation</span></div>
-              <i class="fa-solid fa-arrow-up-right-from-square text-gray-400 group-hover:text-[#25D366]"></i>
-            </a>
-            <div class="card p-5 flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#E0AB47] text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-envelope"></i></div>
-              <div class="flex-1 min-w-0"><p class="text-xs text-gray-500 font-semibold">Email Me</p><a href="mailto:sandeepjeripothula8@gmail.com" class="font-bold text-gray-900 hover:text-[#015178] text-sm truncate block">sandeepjeripothula8@gmail.com</a></div>
-              <button onclick="copyEmail()" class="p-2 rounded-lg bg-[#ACC0FE]/15 hover:bg-[#ACC0FE]/30 text-[#015178] transition-colors"><i class="fa-solid fa-copy text-sm"></i></button>
-            </div>
-            <div class="light-card p-5">
-              <h4 class="font-bold text-sm text-gray-900 mb-3">Quick Actions</h4>
-              <div class="grid grid-cols-2 gap-2.5">
-                <a href="tel:9542382894" class="py-3 rounded-xl bg-[#015178] text-white text-xs font-semibold text-center flex items-center justify-center gap-2"><i class="fa-solid fa-phone"></i>Call Now</a>
-                <a href="mailto:sandeepjeripothula8@gmail.com" class="py-3 rounded-xl bg-[#E0AB47] text-white text-xs font-semibold text-center flex items-center justify-center gap-2"><i class="fa-solid fa-envelope"></i>Email Me</a>
+        <div class="relative lg:h-[600px] flex items-center justify-center fade-up" style="animation-delay: 0.2s;">
+          <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-3xl"></div>
+          <div class="glass-card p-4 sm:p-6 w-full max-w-md relative floating z-10">
+            <img src="assets/images/sandeep_profile.jpg" alt="Sandeep Studio" class="w-full h-80 sm:h-96 object-cover rounded-xl shadow-2xl"/>
+            <div class="absolute -bottom-6 -left-6 glass-panel p-4 rounded-xl flex items-center gap-4">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-[#001524] text-xl font-black">5+</div>
+              <div>
+                <div class="text-sm font-bold text-white">Years of</div>
+                <div class="text-xs text-gray-400 uppercase tracking-wide">Experience</div>
               </div>
             </div>
-          </div>
-          <div class="lg:col-span-7">
-            <div class="card p-6 sm:p-8">
-              <h3 class="text-xl font-bold text-gray-900 mb-6">Send Project Inquiry</h3>
-              <form id="contact-form" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div><label class="text-xs font-semibold text-gray-600 mb-1 block">Name *</label><input id="f-name" type="text" placeholder="Your name" required class="w-full px-4 py-3 rounded-xl bg-[#ACC0FE]/5 border border-[#ACC0FE]/20 focus:border-[#015178] focus:ring-2 focus:ring-[#015178]/10 outline-none text-sm"/></div>
-                  <div><label class="text-xs font-semibold text-gray-600 mb-1 block">Email</label><input id="f-email" type="email" placeholder="your@email.com" class="w-full px-4 py-3 rounded-xl bg-[#ACC0FE]/5 border border-[#ACC0FE]/20 focus:border-[#015178] focus:ring-2 focus:ring-[#015178]/10 outline-none text-sm"/></div>
-                </div>
-                <div><label class="text-xs font-semibold text-gray-600 mb-1 block">Service</label>
-                  <select id="f-service" class="w-full px-4 py-3 rounded-xl bg-[#ACC0FE]/5 border border-[#ACC0FE]/20 focus:border-[#015178] outline-none text-sm">
-                    <option>Graphic Design</option><option>YouTube Thumbnails</option><option>Poster Design</option><option>Social Media Design</option><option>Branding & Identity</option><option>Advertisements</option><option>Video Editing</option><option>Reels / Short Videos</option><option>Full-Length Videos</option><option>Motion Graphics</option><option>Multiple Services</option>
-                  </select></div>
-                <div><label class="text-xs font-semibold text-gray-600 mb-1 block">Project Details *</label><textarea id="f-message" rows="4" placeholder="Describe your project..." required class="w-full px-4 py-3 rounded-xl bg-[#ACC0FE]/5 border border-[#ACC0FE]/20 focus:border-[#015178] focus:ring-2 focus:ring-[#015178]/10 outline-none text-sm resize-none"></textarea></div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <button type="submit" class="w-full py-3 rounded-xl bg-[#015178] hover:bg-[#013a57] text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2"><i class="fa-solid fa-envelope"></i>Send via Email</button>
-                  <button type="button" onclick="sendWhatsApp()" class="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2"><i class="fa-brands fa-whatsapp text-lg"></i>Send via WhatsApp</button>
-                </div>
-              </form>
+            <div class="absolute -top-6 -right-6 glass-panel p-3 rounded-xl flex items-center gap-3">
+              <i class="fa-solid fa-star text-yellow-400"></i>
+              <span class="text-sm font-bold text-white">Premium Quality</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / STATS SECTION -->
+    <section id="about" class="py-16 border-y border-white/5 bg-white/[0.01]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="section-tag">About Me</span>
+            <h2 class="text-3xl sm:text-4xl font-bold">Creative Visionary.</h2>
+            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
+              I am passionate about creating designs that not only look stunning but also drive results. My creative approach blends modern aesthetics with strategic thinking, ensuring every project—from branding to video editing—leaves a lasting impact.
+            </p>
+          </div>
+          <div class="lg:col-span-5">
+            <div id="stats-grid" class="glass-card flex items-center justify-center p-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 px-4 sm:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="section-tag mx-auto">Expertise</span>
+          <h2 class="text-4xl font-bold mt-2">My Skills</h2>
+        </div>
+        <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- SOFTWARE SECTION (SEPARATE) -->
+    <section id="software" class="py-24 px-4 sm:px-8 bg-white/[0.02] border-y border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="section-tag mx-auto">Tools of the Trade</span>
+          <h2 class="text-4xl font-bold mt-2">Software I Use</h2>
+        </div>
+        <div id="software-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 px-4 sm:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span class="section-tag">Portfolio</span>
+            <h2 class="text-4xl font-bold mt-2">Featured Projects</h2>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Posters">Posters</button>
+            <button class="filter-btn" data-filter="Thumbnails">Thumbnails</button>
+            <button class="filter-btn" data-filter="Branding">Branding</button>
+            <button class="filter-btn" data-filter="Video Editing">Video</button>
+            <button class="filter-btn" data-filter="Motion Graphics">Motion</button>
+          </div>
+        </div>
+        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 px-4 sm:px-8 bg-white/[0.02] border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="section-tag mx-auto">What I Offer</span>
+          <h2 class="text-4xl font-bold mt-2">Professional Services</h2>
+        </div>
+        <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-4 sm:px-8 relative">
+      <div class="max-w-7xl mx-auto glass-card p-8 sm:p-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="text-4xl font-bold mt-2 mb-6">Let's work together.</h2>
+            <p class="text-gray-400 mb-10 text-lg">Have a project in mind or want to collaborate? Feel free to reach out. I'm currently available for new opportunities.</p>
+            
+            <div class="space-y-6">
+              <div class="flex items-center gap-5">
+                <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xl"><i class="fa-solid fa-phone"></i></div>
+                <div><p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Phone</p><a href="tel:9542382894" class="text-xl font-bold hover:text-blue-300 transition-colors">9542382894</a></div>
+              </div>
+              <div class="flex items-center gap-5">
+                <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xl"><i class="fa-solid fa-envelope"></i></div>
+                <div><p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Email</p><a href="mailto:sandeepjeripothula8@gmail.com" class="text-xl font-bold hover:text-blue-300 transition-colors">sandeepjeripothula8@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 mt-12">
+              <a href="#" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-[#001524] transition-all"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-[#001524] transition-all"><i class="fa-brands fa-behance"></i></a>
+              <a href="#" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-[#001524] transition-all"><i class="fa-brands fa-dribbble"></i></a>
+              <a href="#" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-[#001524] transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <form class="space-y-5" onsubmit="event.preventDefault(); alert('Message feature coming soon! Please use Phone or Email directly.');">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                  <input type="text" class="w-full px-5 py-4 rounded-xl text-sm" placeholder="John Doe" required/>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                  <input type="email" class="w-full px-5 py-4 rounded-xl text-sm" placeholder="john@example.com" required/>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                <input type="tel" class="w-full px-5 py-4 rounded-xl text-sm" placeholder="+91 00000 00000"/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+                <textarea rows="5" class="w-full px-5 py-4 rounded-xl text-sm resize-none" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full justify-center py-4 text-base mt-2">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-[#015178]/10 py-8 px-4 sm:px-8 bg-white/30">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-sm">S</div><span class="font-bold text-sm text-gray-800">SANDEEP STUDIO</span></div>
-      <p class="text-xs text-gray-400 text-center">All creative works are original productions by Sandeep.</p>
-      <div class="flex items-center gap-2">
-        <a href="tel:9542382894" class="w-9 h-9 rounded-lg bg-gray-100 hover:bg-[#015178] hover:text-white text-gray-600 flex items-center justify-center transition-all"><i class="fa-solid fa-phone text-sm"></i></a>
-        <a href="https://wa.me/919542382894" target="_blank" class="w-9 h-9 rounded-lg bg-gray-100 hover:bg-[#25D366] hover:text-white text-gray-600 flex items-center justify-center transition-all"><i class="fa-brands fa-whatsapp text-sm"></i></a>
-        <a href="mailto:sandeepjeripothula8@gmail.com" class="w-9 h-9 rounded-lg bg-gray-100 hover:bg-[#E0AB47] hover:text-white text-gray-600 flex items-center justify-center transition-all"><i class="fa-solid fa-envelope text-sm"></i></a>
-      </div>
+  <footer class="border-t border-white/10 py-10 px-4 sm:px-8 text-center bg-[#000a12]">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white font-extrabold text-xl">S</div>
+      <p class="text-sm text-gray-500 font-medium tracking-wide">© 2024 Sandeep Studio. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- PROJECT MODAL -->
-  <div id="project-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" onclick="if(event.target===this)closeProject()">
-    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-      <div class="relative"><img id="pm-img" src="" alt="" class="w-full h-64 sm:h-80 object-cover rounded-t-2xl"/><button onclick="closeProject()" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-gray-800 flex items-center justify-center shadow-md"><i class="fa-solid fa-xmark"></i></button></div>
-      <div class="p-6 space-y-3">
-        <span id="pm-cat" class="text-xs font-semibold text-[#E0AB47] tracking-wider uppercase"></span>
-        <h2 id="pm-title" class="text-2xl font-bold text-gray-900"></h2>
-        <p id="pm-client" class="text-sm text-gray-500"></p>
-        <div class="pt-3 flex flex-wrap gap-3">
-          <button onclick="openInquiry('Similar Project')" class="px-5 py-2.5 rounded-xl bg-[#015178] text-white text-xs font-semibold shadow-md hover:bg-[#013a57] flex items-center gap-2"><i class="fa-solid fa-paper-plane"></i>Request Similar</button>
-          <a href="https://wa.me/919542382894?text=Hi%20Sandeep,%20I%20want%20a%20similar%20project!" target="_blank" class="px-5 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-semibold shadow-md hover:bg-[#20bd5a] flex items-center gap-2"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- INQUIRY MODAL -->
-  <div id="inquiry-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" onclick="if(event.target===this)closeInquiry()">
-    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl p-6 sm:p-8 relative">
-      <button onclick="closeInquiry()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
-      <div class="text-center mb-6">
-        <div class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg"><i class="fa-solid fa-handshake"></i></div>
-        <h3 class="text-xl font-bold text-gray-900">Quick Connect</h3>
-        <p class="text-sm text-gray-500 mt-1">Choose how to reach me</p>
-      </div>
-      <div class="space-y-3 mb-4">
-        <select id="iq-service" class="w-full px-4 py-3 rounded-xl bg-[#ACC0FE]/5 border border-[#ACC0FE]/20 text-sm font-medium outline-none focus:border-[#015178]">
-          <option>Graphic Design</option><option>YouTube Thumbnails</option><option>Poster Design</option><option>Social Media Design</option><option>Branding & Identity</option><option>Advertisements</option><option>Video Editing</option><option>Reels / Short Videos</option><option>Full-Length Videos</option><option>Motion Graphics</option>
-        </select>
-      </div>
-      <div class="space-y-2.5">
-        <a href="tel:9542382894" class="w-full py-3 rounded-xl bg-[#015178] text-white font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#013a57]"><i class="fa-solid fa-phone"></i>Call 9542382894</a>
-        <a href="https://wa.me/919542382894" target="_blank" class="w-full py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#20bd5a]"><i class="fa-brands fa-whatsapp text-lg"></i>WhatsApp</a>
-        <a href="mailto:sandeepjeripothula8@gmail.com" class="w-full py-3 rounded-xl bg-[#E0AB47] text-white font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#c4932e]"><i class="fa-solid fa-envelope"></i>Email Me</a>
-        <a href="#contact" onclick="closeInquiry()" class="w-full py-3 rounded-xl bg-[#ACC0FE]/15 text-[#015178] font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#ACC0FE]/30 border border-[#ACC0FE]/25"><i class="fa-solid fa-file-lines"></i>Fill Detailed Form</a>
-      </div>
-    </div>
-  </div>
 
   <script src="assets/js/portfolio-data.js"></script>
   <script src="assets/js/main.js"></script>

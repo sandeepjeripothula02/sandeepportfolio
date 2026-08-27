@@ -17,9 +17,9 @@ function renderStats() {
   const c = document.getElementById("hero-stats");
   if (!c) return;
   c.innerHTML = PORTFOLIO_DATA.profile.stats.map(s => `
-    <div class="text-left py-2 pr-4 border-r border-white/10 last:border-0 last:pr-0">
-      <div class="text-2xl sm:text-3xl font-extrabold text-white mb-0.5">${s.value}</div>
-      <div class="text-[10px] sm:text-xs font-semibold tracking-widest text-gray-400 uppercase">${s.label}</div>
+    <div class="text-left py-2 pr-6 border-r border-white/10 last:border-0 last:pr-0">
+      <div class="text-3xl font-extrabold text-white mb-1 tracking-tight">${s.value}</div>
+      <div class="text-[10px] font-semibold tracking-widest text-gray-400 uppercase">${s.label}</div>
     </div>
   `).join("");
 }
@@ -27,12 +27,28 @@ function renderStats() {
 function renderAboutStats() {
   const c = document.getElementById("experience-stats");
   if (!c) return;
-  c.innerHTML = PORTFOLIO_DATA.profile.experienceStats.map(s => `
-    <div class="glass-card p-6 text-center reveal">
-      <div class="text-4xl font-extrabold text-white mb-2 counter">${s.value}</div>
-      <div class="text-xs font-semibold tracking-wider text-gray-400 uppercase">${s.label}</div>
-    </div>
-  `).join("");
+  c.innerHTML = PORTFOLIO_DATA.profile.experienceStats.map(s => {
+    // Extract numbers for animation
+    const numMatch = s.value.match(/(\d+)/);
+    const num = numMatch ? parseInt(numMatch[1]) : 0;
+    const suffix = s.value.replace(/[0-9]/g, '');
+    
+    if (num > 0) {
+      return `
+      <div class="glass-card p-8 text-center reveal">
+        <div class="text-5xl font-extrabold text-white mb-3 tracking-tight"><span class="counter-val" data-target="${num}">0</span>${suffix}</div>
+        <div class="text-xs font-semibold tracking-widest text-gray-400 uppercase">${s.label}</div>
+      </div>
+      `;
+    } else {
+      return `
+      <div class="glass-card p-8 text-center reveal">
+        <div class="text-3xl font-extrabold text-white mb-4 mt-2 tracking-tight">${s.value}</div>
+        <div class="text-xs font-semibold tracking-widest text-gray-400 uppercase">${s.label}</div>
+      </div>
+      `;
+    }
+  }).join("");
 }
 
 function renderSkills() {
@@ -40,10 +56,10 @@ function renderSkills() {
   if (!c) return;
   c.innerHTML = PORTFOLIO_DATA.skills.map(s => `
     <div class="glass-card p-8 flex flex-col group reveal">
-      <div class="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-xl text-white mb-5 group-hover:bg-white group-hover:text-[#001524] transition-all duration-300">
+      <div class="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl text-white mb-6 group-hover:bg-white group-hover:text-[#001524] transition-all duration-400 shadow-lg">
         <i class="fa-solid ${s.icon}"></i>
       </div>
-      <h3 class="font-bold text-white mb-2 text-lg">${s.name}</h3>
+      <h3 class="font-bold text-white mb-3 text-lg">${s.name}</h3>
       <p class="text-sm text-gray-400 leading-relaxed">${s.desc}</p>
     </div>
   `).join("");
@@ -54,8 +70,8 @@ function renderSoftware() {
   if (!c) return;
   c.innerHTML = PORTFOLIO_DATA.software.map(s => `
     <div class="glass-card p-6 flex flex-col group cursor-default reveal">
-      <div class="flex items-center gap-4 mb-4">
-        <div class="w-12 h-12 shrink-0 rounded-lg bg-gradient-to-br from-white/10 to-transparent border border-white/10 flex items-center justify-center text-xl text-white group-hover:scale-110 transition-transform duration-300">
+      <div class="flex items-center gap-5 mb-4">
+        <div class="w-14 h-14 shrink-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform duration-500 shadow-lg">
           <i class="fa-solid ${s.faClass}"></i>
         </div>
         <h3 class="font-bold text-white text-lg">${s.name}</h3>
@@ -70,11 +86,11 @@ function renderServices() {
   if (!c) return;
   c.innerHTML = PORTFOLIO_DATA.services.map(s => `
     <div class="glass-card p-6 flex items-start gap-4 group reveal">
-      <div class="w-10 h-10 shrink-0 rounded border border-white/10 flex items-center justify-center text-white bg-white/5 group-hover:bg-white/20 transition-all">
+      <div class="w-12 h-12 shrink-0 rounded-lg border border-white/10 flex items-center justify-center text-white bg-white/5 group-hover:bg-white/20 transition-all">
         <i class="fa-solid ${s.icon}"></i>
       </div>
       <div>
-        <h3 class="font-bold text-white mb-1.5 text-base">${s.title}</h3>
+        <h3 class="font-bold text-white mb-2 text-base">${s.title}</h3>
         <p class="text-sm text-gray-400 leading-relaxed">${s.desc}</p>
       </div>
     </div>
@@ -84,11 +100,10 @@ function renderServices() {
 function renderProcess() {
   const c = document.getElementById("process-grid");
   if (!c) return;
-  c.innerHTML = PORTFOLIO_DATA.process.map((p, i) => `
-    <div class="relative pl-10 pb-10 border-l border-white/10 last:border-0 last:pb-0 reveal">
-      <div class="absolute left-[-17px] top-0 w-8 h-8 rounded-full bg-[#001524] border-2 border-white/30 flex items-center justify-center text-xs font-bold text-white z-10">${p.step}</div>
-      <h3 class="font-bold text-white text-xl mb-2">${p.title}</h3>
-      <p class="text-gray-400 text-sm leading-relaxed">${p.desc}</p>
+  c.innerHTML = PORTFOLIO_DATA.process.map(p => `
+    <div class="process-step reveal" data-step="${p.step}">
+      <h3 class="font-bold text-white text-xl mb-3 tracking-tight">${p.title}</h3>
+      <p class="text-gray-400 text-sm leading-relaxed max-w-md">${p.desc}</p>
     </div>
   `).join("");
 }
@@ -97,12 +112,12 @@ function renderWhyMe() {
   const c = document.getElementById("why-me-grid");
   if (!c) return;
   c.innerHTML = PORTFOLIO_DATA.whyMe.map(w => `
-    <div class="glass-card p-6 text-center group reveal">
-      <div class="w-12 h-12 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-4">
+    <div class="glass-card p-8 text-center group reveal">
+      <div class="w-14 h-14 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 text-xl">
         <i class="fa-solid ${w.icon}"></i>
       </div>
-      <h3 class="font-bold text-white mb-2">${w.title}</h3>
-      <p class="text-sm text-gray-400">${w.desc}</p>
+      <h3 class="font-bold text-white mb-3 text-lg">${w.title}</h3>
+      <p class="text-sm text-gray-400 leading-relaxed">${w.desc}</p>
     </div>
   `).join("");
 }
@@ -139,16 +154,17 @@ function renderPortfolio(f, query="") {
 
   c.innerHTML = items.map(p => `
     <div class="portfolio-card group cursor-pointer reveal" onclick="openProject('${p.id}')">
-      <div class="relative overflow-hidden h-[340px]">
-        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover" loading="lazy"/>
-        <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-6">
-          <span class="text-xs font-semibold tracking-wider text-gray-300 uppercase mb-2">${p.category}</span>
-          <h3 class="font-bold text-white text-2xl mb-4">${p.title}</h3>
-          <button class="btn-primary self-start text-xs py-2 px-4">View Project</button>
-        </div>
+      <img src="${p.image}" alt="${p.title}" loading="lazy"/>
+      <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+        <span class="text-[10px] font-bold tracking-widest text-gray-300 uppercase mb-2">${p.category}</span>
+        <h3 class="font-bold text-white text-2xl mb-4 tracking-tight">${p.title}</h3>
+        <button class="btn-primary self-start text-xs py-2 px-5 font-bold">View Project</button>
       </div>
     </div>
   `).join("");
+  
+  // Re-init reveal observer for new elements
+  initScrollAnimations();
 }
 
 function initFilters() {
@@ -158,7 +174,6 @@ function initFilters() {
       b.classList.add("active");
       currentFilter = b.dataset.filter;
       
-      // Clear search when clicking a filter
       const searchInputs = document.querySelectorAll('.search-input');
       searchInputs.forEach(input => input.value = "");
       
@@ -172,8 +187,8 @@ function initNav() {
   const tog = document.getElementById("menu-toggle");
   const dr = document.getElementById("menu-drawer");
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) nav.classList.add("nav-fixed", "py-2");
-    else { nav.classList.remove("nav-fixed", "py-2"); }
+    if (window.scrollY > 50) nav.classList.add("nav-fixed", "py-3");
+    else nav.classList.remove("nav-fixed", "py-3");
   });
   if (tog && dr) {
     tog.addEventListener("click", () => dr.classList.toggle("hidden"));
@@ -186,20 +201,16 @@ function initSearch() {
   searchInputs.forEach(input => {
     input.addEventListener("input", (e) => {
       const term = e.target.value.trim();
-      
-      // Sync inputs
       searchInputs.forEach(inp => { if(inp !== e.target) inp.value = term; });
       
-      // Reset filter visually
       if (term.length > 0) {
         document.querySelectorAll(".filter-btn").forEach(x => x.classList.remove("active"));
         document.querySelector('.filter-btn[data-filter="all"]').classList.add("active");
         currentFilter = "all";
       }
       
-      // If user types, we automatically scroll them to portfolio smoothly if not already there
       const portSection = document.getElementById("projects");
-      if (term.length > 1 && portSection && window.scrollY < (portSection.offsetTop - 200)) {
+      if (term.length > 2 && portSection && window.scrollY < (portSection.offsetTop - 200)) {
         window.scrollTo({ top: portSection.offsetTop - 100, behavior: 'smooth' });
       }
       
@@ -208,20 +219,50 @@ function initSearch() {
   });
 }
 
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter-val');
+  const speed = 100;
+  counters.forEach(counter => {
+    if(counter.dataset.animated) return;
+    
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const inc = target / speed;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+        counter.dataset.animated = "true";
+      }
+    };
+    updateCount();
+  });
+}
+
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
+        if(entry.target.querySelector('.counter-val') || entry.target.classList.contains('counter-val')) {
+          animateCounters();
+        }
       }
     });
-  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+  }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
 
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  document.querySelectorAll(".reveal").forEach(el => {
+    // Only observe elements that haven't been animated yet
+    if(!el.classList.contains("active")) {
+        observer.observe(el);
+    }
+  });
 }
 
 window.openProject = function(id) {
   const p = PORTFOLIO_DATA.portfolio.find(x => x.id === id);
   if (!p) return;
-  alert("Viewing Project:\n\nTitle: " + p.title + "\nCategory: " + p.category + "\n\n(Modal implementation ready!)");
+  alert("Viewing Project:\n\nTitle: " + p.title + "\nCategory: " + p.category);
 };

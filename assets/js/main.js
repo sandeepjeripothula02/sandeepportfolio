@@ -48,31 +48,36 @@ function initIntro() {
       `;
     }
     
-    // Show enter button
-    setTimeout(() => {
-      enterBtn.style.opacity = '1';
-    }, 800);
-  }, 2200);
-
-  // 3. Enter Button Click (Audio & Fade out)
-  enterBtn.addEventListener('click', () => {
-    // Speak using Web Speech API
+    // Speak automatically as soon as it arrives!
     if ('speechSynthesis' in window) {
       const msg = new SpeechSynthesisUtterance("Hi! Welcome to Sandeep Portfolio.");
       msg.voiceURI = 'native';
       msg.volume = 1;
       msg.rate = 1.1; // Slightly faster/cute
       msg.pitch = 1.5; // High pitch for robot
-      window.speechSynthesis.speak(msg);
+      
+      // We wrap it in a try-catch because some browsers block autoplay audio without user interaction
+      try {
+        window.speechSynthesis.speak(msg);
+      } catch (e) {
+        console.log("Autoplay audio blocked by browser.");
+      }
     }
+    
+    // Show enter button
+    setTimeout(() => {
+      enterBtn.style.opacity = '1';
+    }, 800);
+  }, 2200);
 
+  // 3. Enter Button Click (Fade out)
+  enterBtn.addEventListener('click', () => {
     // Fade out overlay
     overlay.style.opacity = '0';
     document.body.style.overflow = ''; // Allow scrolling again
     
     setTimeout(() => {
       overlay.remove();
-      // Trigger scroll animations for hero section
       document.body.classList.remove('overflow-hidden');
     }, 1000);
   });

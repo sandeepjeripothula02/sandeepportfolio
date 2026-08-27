@@ -43,6 +43,13 @@ const PORTFOLIO_DATA = {
     { name: "Adobe Premiere Pro", desc: "Professional video editing, storytelling, transitions and video production.", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" },
     { name: "Adobe After Effects", desc: "Motion graphics, animation, visual effects and advanced video compositions.", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-original.svg" }
   ],
+  testimonials: [
+    { name: "Rahul Sharma", role: "Content Creator", text: "Sandeep is an incredible video editor! His thumbnails and motion graphics took my YouTube channel to the next level." },
+    { name: "Priya Reddy", role: "Business Owner", text: "The branding and poster designs provided were extremely professional and perfectly captured my brand's vibe." },
+    { name: "Arun Kumar", role: "Digital Marketer", text: "Very fast delivery and premium quality work. His social media creatives always get great engagement." },
+    { name: "Neha Singh", role: "Entrepreneur", text: "Top-notch editing skills! Sandeep understands the exact pacing and transitions needed for viral reels." },
+    { name: "Karthik V", role: "Agency Director", text: "One of the best freelance designers we've worked with. Highly recommended for high-end creative projects." }
+  ],
   services: [
     { title: "Graphic Design", desc: "Professional digital designs, advertisements and creative visuals.", icon: "fa-pen-nib" },
     { title: "YouTube Thumbnails", desc: "Eye-catching and professional thumbnails designed for digital creators.", icon: "fa-image" },

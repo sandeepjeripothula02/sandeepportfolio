@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPortfolio();
   renderProcess();
   renderWhyMe();
+  renderReviews();
   initFilters();
   initNav();
   initSearch();
@@ -150,6 +151,29 @@ function renderWhyMe() {
       <p class="text-sm text-gray-400 leading-relaxed">${w.desc}</p>
     </div>
   `).join("");
+}
+
+function renderReviews() {
+  const t = document.getElementById("reviews-track");
+  if (!t) return;
+  const items = PORTFOLIO_DATA.testimonials.map(r => `
+    <div class="glass-card p-8 review-card group cursor-default">
+      <div class="flex gap-1 text-yellow-400 text-sm mb-4">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed mb-6 italic">"${r.text}"</p>
+      <div class="flex items-center gap-4 mt-auto">
+        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center font-bold">
+          ${r.name.charAt(0)}
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm">${r.name}</h4>
+          <p class="text-gray-500 text-xs uppercase tracking-wider">${r.role}</p>
+        </div>
+      </div>
+    </div>
+  `).join("");
+  t.innerHTML = items + items; // Duplicate for endless loop
 }
 
 let currentFilter = "all";

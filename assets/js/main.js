@@ -431,3 +431,22 @@ window.openProject = function(id) {
   if (!p) return;
   alert("Viewing Project:\n\nTitle: " + p.title + "\nCategory: " + p.category);
 };
+// WhatsApp Form Submission
+function sendToWhatsApp(event) {
+  event.preventDefault(); // Prevent page reload
+
+  const name = document.getElementById('contact-name').value.trim();
+  const email = document.getElementById('contact-email').value.trim();
+  const phone = document.getElementById('contact-phone').value.trim();
+  const msg = document.getElementById('contact-msg').value.trim();
+
+  // Create the WhatsApp message
+  const whatsappMessage = `Hello Sandeep, I am contacting you from your portfolio website.%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Message:* ${msg}`;
+
+  // Direct link to WhatsApp
+  const whatsappURL = `https://wa.me/919542382894?text=${whatsappMessage}`;
+
+  // Open in a new tab
+  window.open(whatsappURL, '_blank');
+}
+
